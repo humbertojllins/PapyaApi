@@ -1,0 +1,176 @@
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.deps.json
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.runtimeconfig.json
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.runtimeconfig.dev.json
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.pdb
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/AWSSDK.Core.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/AWSSDK.SimpleEmail.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/BouncyCastle.Cryptography.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Dapper.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.Streams.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/K4os.Hash.xxHash.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Magick.NET-Q8-AnyCPU.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Magick.NET.Core.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Cors.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Http.Owin.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Abstractions.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Cors.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Host.SystemWeb.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Security.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Security.OAuth.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/MySql.Data.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Owin.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Encoding.CodePages.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Encodings.Web.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Json.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/WebPush.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/ZstdSharp.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/Magick.Native-Q8-x64.dll.so
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/Magick.Native-Q8-x64.dll.so
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/Magick.Native-Q8-x64.dll.dylib
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Magick.Native-Q8-x64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Magick.Native-Q8-x86.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/comerr64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/gssapi64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/k5sprt64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/krb5_64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/krbcc64.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csprojAssemblyReference.cache
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.AssemblyInfoInputs.cache
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.AssemblyInfo.cs
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csproj.CoreCompileInputs.cache
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.MvcApplicationPartsAssemblyInfo.cs
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.MvcApplicationPartsAssemblyInfo.cache
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.RazorTargetAssemblyInfo.cache
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csproj.CopyComplete
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.dll
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.pdb
+/Users/humbertolins/Documents/Projetos/TingleApi/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.genruntimeconfig.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.deps.json
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.runtimeconfig.json
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.runtimeconfig.dev.json
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/tingleapi.pdb
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/AWSSDK.Core.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/AWSSDK.SimpleEmail.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/BouncyCastle.Cryptography.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Dapper.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Google.Protobuf.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/K4os.Compression.LZ4.Streams.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/K4os.Hash.xxHash.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Magick.NET-Q8-AnyCPU.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Magick.NET.Core.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Cors.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Web.Http.Owin.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Abstractions.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Cors.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Host.SystemWeb.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Security.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Microsoft.Owin.Security.OAuth.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/MySql.Data.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Owin.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Encoding.CodePages.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Encodings.Web.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/System.Text.Json.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/WebPush.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/ZstdSharp.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/Magick.Native-Q8-x64.dll.so
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/Magick.Native-Q8-x64.dll.so
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/Magick.Native-Q8-x64.dll.dylib
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/Magick.Native-Q8-x64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/Magick.Native-Q8-x86.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/comerr64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/gssapi64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/k5sprt64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/krb5_64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/krbcc64.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csproj.AssemblyReference.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.AssemblyInfoInputs.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.AssemblyInfo.cs
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csproj.CoreCompileInputs.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.MvcApplicationPartsAssemblyInfo.cs
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.MvcApplicationPartsAssemblyInfo.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.RazorTargetAssemblyInfo.cache
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.csproj.CopyComplete
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.dll
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.pdb
+/Users/humbertolins/Documents/Projetos/Projetos 2024/Tingle_API/tingleapi/obj/Debug/netcoreapp3.1/tingleapi.genruntimeconfig.cache

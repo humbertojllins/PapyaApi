@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>b09ca410-9683-408d-814d-f3d917a695c7</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'papya_api.' " />
+  <ItemGroup>
+    <Folder Include="DataProvider\" />
+    <Folder Include="Models\" />
+    <Folder Include="DataProvider\TipoUsuarioPasta\" />
+    <Folder Include="DataProvider\Usuario\" />
+    <Folder Include="DataProvider\Conta\" />
+    <Folder Include="DataProvider\Cardapio\" />
+    <Folder Include="ExtensionMethods\" />
+    <Folder Include="DataProvider\Pedido\" />
+    <Folder Include="Services\" />
+    <Folder Include="DataProvider\Promocoes\" />
+    <Folder Include="DataProvider\Categoria\" />
+    <Folder Include="DataProvider\Estabelecimento\" />
+    <Folder Include="DataProvider\TipoEstabelecimento\" />
+    <Folder Include="DataProvider\TipoFuncionario\" />
+    <Folder Include="DataProvider\Funcionario\" />
+    <Folder Include="DataProvider\PedidoItem\" />
+    <Folder Include="DataProvider\StatusItem\" />
+    <Folder Include="DataProvider\Mesa\" />
+    <Folder Include="DataProvider\FuncionarioMesa\" />
+    <Folder Include="DataProvider\MeioPagamento\" />
+    <Folder Include="DataProvider\Notificacao\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="MySql.Data" Version="9.0.0" />
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+<Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+</PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.2.7" />
+    <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Owin.Cors" Version="4.0.1" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.3.101.39" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.0" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="13.10.0" />
+    <PackageReference Include="WebPush" Version="1.0.11" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.32" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\uploads\Cardapio\44IMG_3935.jpg" />
+    <Content Remove="wwwroot\uploads\2Reduzida.JPG" />
+    <Content Remove="wwwroot\uploads\2Reduzida.JPG" />
+    <Content Remove="wwwroot\uploads\2Reduzida.JPG" />
+    <Content Remove="wwwroot\uploads\estabelecimento\41cafeideal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+</Project>
