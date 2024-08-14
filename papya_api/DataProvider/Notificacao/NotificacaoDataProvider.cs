@@ -49,6 +49,33 @@ namespace papya_api.DataProvider
                 }
             }
         }
+        public object UpdateNotificacao(Notificacao Notificacao)
+        {
+            using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
+            {
+                try
+                {
+                    conexao.Open();
+                    var sql = "UPDATE notificacao" +
+                                " SET " +
+                                " fkestabelecimento =" + Notificacao.Fkestabelecimento + "," +
+                                " client =" + "'" + Notificacao.Client + "'," +
+                                " endpoint=" + "'" + Notificacao.EndPoint + "'," +
+                                " p256dh =" + "'" + Notificacao.P256dh + "'," +
+                                " auth=" + "'" + Notificacao.Auth + "'" +
+                                " WHERE fkestabelecimento = " + Notificacao.Fkestabelecimento +
+                                " AND client =" + "'" + Notificacao.Client + "'";
+
+                    return conexao.ExecuteScalar(sql, commandType: System.Data.CommandType.Text);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        
 
         public async Task<Notificacao> GetNotificacao(string client)
         {
@@ -117,7 +144,7 @@ namespace papya_api.DataProvider
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    //throw ex;
                 }
             }
 

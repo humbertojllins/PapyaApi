@@ -44,6 +44,12 @@ namespace papya_api.Controllers
             return this.NotificacaoDataProvider.AddNotificacao(Notificacao);
         }
 
+        [HttpPut]
+        public object Put([FromBody] Notificacao Notificacao)
+        {
+            return this.NotificacaoDataProvider.UpdateNotificacao(Notificacao);
+        }
+
         // POST api/values
         //[Authorize("Bearer")]
         [HttpPost("Notify")]

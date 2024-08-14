@@ -12,9 +12,9 @@ namespace papya_api.DataProvider
 
         Task<Mesa> GetMesa(int CodMesa);
 
-        object AddMesa(Mesa Mesa);
+        object AddMesa(Mesa mesa);
 
-        object UpdateMesa(Mesa Mesa);
+        object UpdateMesa(Mesa mesa);
 
         object DeleteMesa(int CodMesa);
 

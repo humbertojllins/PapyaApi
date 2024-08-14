@@ -34,7 +34,7 @@ namespace papya_api.DataProvider
                     //Recupera os dados da imagem atual para deletar se for update
                     Cardapio cardapioDelImagem = ImagemAtual(id);
 
-                    var caminhoImagem = util.UploadImage(cardapioDelImagem.IMAGEM, id, _environment.WebRootPath, Global.PathEntidade.Cardapio, files);
+                    var caminhoImagem = util.UploadImage(cardapioDelImagem.imagem, id, _environment.WebRootPath, Global.PathEntidade.Cardapio, files);
 
                     if (id != 0)
                     {

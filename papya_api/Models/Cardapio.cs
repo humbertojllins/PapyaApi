@@ -7,19 +7,19 @@ namespace papya_api.Models
     public class Cardapio
     {
         [Key]
-        public int CODIGO_ITEM { get; set; }
-        public string ITEM_TITULO { get; set; }
-        public string ITEM_DESCRICAO { get; set; }
-        public double VALOR_ITEM { get; set; }
-        public int TEMPO_ESTIMADO_MIN { get; set; }
-        public int TEMPO_ESTIMADO_MAX { get; set; }
-        public string IMAGEM { get; set; }
-        public int ITEM_ID_CATEGORIA { get; set; }
-        public string CATEGORIA { get; set; }
-        public int FK_ID_ESTABELECIMENTO { get; set; }
-        public int IS_COZINHA { get; set; }
-        public int IS_CARDAPIO { get; set; }
-        public float DESCONTO { get; set; }
+        public int codigo_item { get; set; }
+        public string item_titulo { get; set; }
+        public string item_descricao { get; set; }
+        public double valor_item { get; set; }
+        public int tempo_estimado_min { get; set; }
+        public int tempo_estimado_max { get; set; }
+        public string imagem { get; set; }
+        public int item_id_categoria { get; set; }
+        public string categoria { get; set; }
+        public int fk_id_estabelecimento { get; set; }
+        public int is_cozinha { get; set; }
+        public int is_cardapio { get; set; }
+        public float desconto { get; set; }
 
 
         public static explicit operator Cardapio(Task<Cardapio> v)

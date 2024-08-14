@@ -14,6 +14,8 @@ namespace papya_api.DataProvider
 
         object AddNotificacao(Notificacao Notificacao);
 
+        object UpdateNotificacao(Notificacao Notificacao);
+
         object Notify(int idEstabelecimento, string message);
 
         Task<object> NotificacaoCadastrada(int idEstabelecimento, string client);

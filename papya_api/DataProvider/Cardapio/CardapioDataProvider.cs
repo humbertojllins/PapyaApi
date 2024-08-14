@@ -85,7 +85,7 @@ namespace papya_api.DataProvider
             }
         }
 
-        public object GetCardapios(int idEstabelecimento)
+        public object GetCardapios(int idEstabelecimento, int is_cardapio = 1)
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
@@ -104,16 +104,18 @@ namespace papya_api.DataProvider
                     "c.descricao as categoria " +
                     "from itens i " +
                     "left join categoria c on c.id = i.fk_categoria_id " +
-                    "where i.fk_id_estabelecimento = " + idEstabelecimento.ToString() +
-                    " and is_cardapio=1" +
-                    " order by c.descricao;";
+                    "where i.fk_id_estabelecimento = " + idEstabelecimento.ToString();
+                    if(is_cardapio==1) {
+                        sql += " and is_cardapio=1";
+                    }
+                    sql+= " order by c.descricao;";
 
                 IEnumerable<Cardapio> x = conexao.QueryAsync<Cardapio>(sql,
                 null,
                 commandType: System.Data.CommandType.Text).Result;
                 string js= "[";
                 var listaCateg = from a in x
-                                          group a by a.CATEGORIA into newGroup
+                                          group a by a.categoria into newGroup
                                           orderby newGroup.Key
                                           select newGroup;
                 int qtdCateg = 1;
@@ -129,20 +131,20 @@ namespace papya_api.DataProvider
                     int loop = 0;
                     foreach (Cardapio c in x)
                     {
-                        if (c.CATEGORIA == item.Key)
+                        if (c.categoria == item.Key)
                         {
                             if (loop > 0)
                                 js += ",";
                             js += " { ";
-                            js += @"""codigo_item"":" + c.CODIGO_ITEM + ",";
-                            js += @"""titulo"":" + @"""" + c.ITEM_TITULO + @""",";
-                            js += @"""item"":" + @"""" + c.ITEM_DESCRICAO + @""",";
-                            js += @"""valor"":" + c.VALOR_ITEM + ",";
-                            js += @"""tempo_estimado_min"":" + c.TEMPO_ESTIMADO_MIN + ",";
-                            js += @"""tempo_estimado_max"":" + c.TEMPO_ESTIMADO_MAX + ",";
-                            js += @"""imagem"":" + @"""" + c.IMAGEM + @""",";
-                            js += @"""is_cozinha"":" + @"""" + c.IS_COZINHA + @""",";
-                            js += @"""is_cardapio"":" + @"""" + c.IS_CARDAPIO + @"""";
+                            js += @"""codigo_item"":" + c.codigo_item + ",";
+                            js += @"""titulo"":" + @"""" + c.item_titulo + @""",";
+                            js += @"""item"":" + @"""" + c.item_descricao + @""",";
+                            js += @"""valor"":" + c.valor_item + ",";
+                            js += @"""tempo_estimado_min"":" + c.tempo_estimado_min + ",";
+                            js += @"""tempo_estimado_max"":" + c.tempo_estimado_max + ",";
+                            js += @"""imagem"":" + @"""" + c.imagem + @""",";
+                            js += @"""is_cozinha"":" + @"""" + c.is_cozinha + @""",";
+                            js += @"""is_cardapio"":" + @"""" + c.is_cardapio + @"""";
                             js += " }";
                             loop += 1;
                         }
@@ -160,6 +162,34 @@ namespace papya_api.DataProvider
 
 
                 return js;
+            }
+        }
+        public async Task<object> GetCardapio(int id)
+        {
+            using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
+            {
+                conexao.Open();
+
+                var sql = "select " +
+                    "i.id as codigo_item, " +
+                    "i.titulo as titulo, " +
+                    "i.descricao as item, " +
+                    "i.valor as valor, " +
+                    "i.tempo_estimado_min, " +
+                    "i.tempo_estimado_max, " +
+                    "i.imagem, " +
+                    "i.is_cozinha, " +
+                    "i.fk_categoria_id as item_id_categoria, " +
+                    "i.is_cardapio, " +
+                    "c.descricao as categoria " +
+                    "from itens i " +
+                    "left join categoria c on c.id = i.fk_categoria_id " +
+                    "where i.id = " + id.ToString() +
+                    " order by c.descricao;";
+
+                return await conexao.QuerySingleOrDefaultAsync<object>(sql,
+                null,
+                commandType: System.Data.CommandType.Text);
             }
         }
 

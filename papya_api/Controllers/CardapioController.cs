@@ -22,9 +22,16 @@ namespace papya_api.Controllers
 
         //[Authorize("Bearer")]
         [HttpGet("{id}")]
-        public object Get(int id)
+        [HttpGet("{id}/{is_cardapio?}")]
+        public object Get(int id, int is_cardapio=1)
         {
-            return this.CardapioDataProvider.GetCardapios(id);
+            return this.CardapioDataProvider.GetCardapios(id, is_cardapio);
+        }
+
+        [HttpGet]
+        public async Task<object> GetCardapio(int id)
+        {
+            return await this.CardapioDataProvider.GetCardapio(id);
         }
 
         //Alteração teste GITHUB

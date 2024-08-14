@@ -125,7 +125,7 @@ namespace papya_api.DataProvider
                 commandType: System.Data.CommandType.Text).Result;
                 string js= "[";
                 var listaCateg = from a in x
-                                          group a by a.CATEGORIA into newGroup
+                                          group a by a.categoria into newGroup
                                           orderby newGroup.Key
                                           select newGroup;
                 int qtdCateg = 1;
@@ -141,17 +141,17 @@ namespace papya_api.DataProvider
                     int loop = 0;
                     foreach (Cardapio c in x)
                     {
-                        if (c.CATEGORIA == item.Key)
+                        if (c.categoria == item.Key)
                         {
                             if (loop > 0)
                                 js += ",";
                             js += " { ";
-                            js += @"""codigo_item"":" + c.CODIGO_ITEM + ",";
-                            js += @"""titulo"":" + @"""" + c.ITEM_TITULO + @""",";
-                            js += @"""descricao"":" + @"""" + c.ITEM_DESCRICAO + @""",";
-                            js += @"""valor"":" + c.VALOR_ITEM + ",";
-                            js += @"""desconto"":" + c.DESCONTO + ",";
-                            js += @"""imagem"":" + @"""" + c.IMAGEM + @"""";
+                            js += @"""codigo_item"":" + c.codigo_item + ",";
+                            js += @"""titulo"":" + @"""" + c.item_titulo + @""",";
+                            js += @"""descricao"":" + @"""" + c.item_descricao + @""",";
+                            js += @"""valor"":" + c.valor_item + ",";
+                            js += @"""desconto"":" + c.desconto + ",";
+                            js += @"""imagem"":" + @"""" + c.imagem + @"""";
                             js += " }";
                             loop += 1;
                         }
