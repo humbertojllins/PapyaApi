@@ -301,7 +301,7 @@ namespace papya_api.DataProvider
                 sql += " order by id_promocao desc";
                 sql += qtdLista == null ? " " : " limit " + qtdLista;
 
-                sql += " )E " +
+                sql += " )e " +
                     "inner join tingledb.itens_promocao ip on ip.id_promocao = e.id_promocao " +
                     "inner join tingledb.itens i on ip.id_item = i.id ";
                 sql += idestabelecimento == null ? " " : " where id_estabelecimento= " + idestabelecimento.ToString();

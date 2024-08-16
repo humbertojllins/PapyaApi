@@ -1,33 +1,31 @@
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\papya_api.exe
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\14camarao.jpeg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\1promo_2_sushi.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\1WhatsApp Image 2020-07-25 at 15.07.13.jpeg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\231.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\2WhatsApp Image 2020-07-25 at 15.07.13.jpeg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\56C6CB52B-8F2B-4C65-9090-19D77C0FDE2A.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\108WhatsApp Image 2022-11-02 at 17.11.26.jpeg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\109Capsulda-de-cafe-expresso.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\109heineken.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\1109Churrasco.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\110Capsulda-de-cafe-expresso.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\110kaiser.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\110Suco Laranja.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\111filecomfritas.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\114heineken.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\115filecomfritas.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\116filecomfritas.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\2109croissant.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\42IMG_3935.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Cardapio\44promo_1_rodizio.jpeg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\estabelecimento\1041bardocuscuz.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\estabelecimento\38magali.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\estabelecimento\391promo_2_sushi.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Promocoes\54salemar-2.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\Promocoes\55CervejaCorona-2.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\usuario\2077Capsulda-de-cafe-expresso.jpg
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\usuario\2077tmpitemm.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\usuario\2077tmpMagic Studio Magic Media L&P.png
-C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\uploads\usuario\76Capsulda-de-cafe-expresso.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\108WhatsApp Image 2022-11-02 at 17.11.26.jpeg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\109Capsulda-de-cafe-expresso.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\109heineken.png
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\1109Churrasco.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\110Capsulda-de-cafe-expresso.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\110kaiser.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\110Suco Laranja.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\111filecomfritas.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\114heineken.png
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\115filecomfritas.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\116filecomfritas.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\2109croissant.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\42IMG_3935.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Cardapio\44promo_1_rodizio.jpeg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\1041bardocuscuz.png
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\2Foto1.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\38magali.png
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\391promo_2_sushi.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\401WhatsApp Image 2020-07-25 at 15.07.13.jpeg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Promocoes\54salemar-2.png
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Promocoes\55CervejaCorona-2.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\TipoEstabelecimento\Bar.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\TipoEstabelecimento\Cafe.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\TipoEstabelecimento\Lanchonete.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\TipoEstabelecimento\Restaurante.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Usuario\2Foto1.jpg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Usuario\2pexels-gabriel-peter-219375-719396.jpg
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\appsettings.json
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\papya_api.dll

@@ -140,18 +140,20 @@ namespace papya_api.Services
             {
                 Directory.CreateDirectory(RootPath + pentidade);
             }
-            using (Stream filestream = System.IO.File.Create(RootPath + pentidade + idUsuario.ToString() + files.FileName))
+            string tmpFileName = RootPath + pentidade + idUsuario.ToString() + "tmp" + files.FileName;
+            string finalFileName = RootPath + pentidade + idUsuario.ToString() + files.FileName;
+            //using (Stream filestream = System.IO.File.Create(_environment.WebRootPath + "/uploads/usuario/" + idUsuario.ToString() + "tmp" + files.files.FileName))
+            //using (Stream filestream = System.IO.File.Create(RootPath + pentidade + idUsuario.ToString() + "tmp" + files.FileName))
+            using (Stream filestream = System.IO.File.Create(tmpFileName))
             {
-                string tmpFileName = RootPath + pentidade + idUsuario.ToString() + "tmp" + files.FileName;
-                string finalFileName = RootPath + pentidade + idUsuario.ToString() + files.FileName;
+                //string tmpFileName = RootPath + pentidade + idUsuario.ToString() + "tmp" + files.FileName;
+                //string finalFileName = RootPath + pentidade + idUsuario.ToString() + files.FileName;
                 files.CopyTo(filestream);
                 filestream.Flush();
-
-                //Reduzir o tamanho da imagem
-                //util.CompressImage(tmpFileName, finalFileName,true);
-               
-                return  pentidade + idUsuario.ToString() + files.FileName;
             }
+            //Reduzir o tamanho da imagem
+            CompressImage(tmpFileName, finalFileName, true);
+            return pentidade + idUsuario.ToString() + files.FileName;
         }
 
     }

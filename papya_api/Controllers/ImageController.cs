@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using papya_api.Models;
 using ImageMagick;
 using papya_api.Services;
+using papya_api.DataProvider;
 
 namespace papya_api.Controllers
 {
@@ -26,8 +27,8 @@ namespace papya_api.Controllers
         }
         [HttpPost]
         public object Post(
-            [FromServices]DataProvider.UsuarioDAO usersDAO,
-            [FromForm] int idUsuario, 
+            [FromServices] DataProvider.UsuarioDAO usersDAO,
+            [FromForm] int idUsuario,
             [FromForm] FIleUploadAPI files)
         {
             if (files.files.Length > 0)
@@ -35,36 +36,14 @@ namespace papya_api.Controllers
                 try
                 {
                     //Recupera a os dados de imagem atual do usuário
-                    Usuario usuDelImagem = usersDAO.ImagemAtual(idUsuario);
+                    Usuario estDelImagem = usersDAO.ImagemAtual(idUsuario);
+                    var caminhoImagem = util.UploadImage(estDelImagem.Imagem, idUsuario, _environment.WebRootPath, Global.PathEntidade.Usuario, files.files);
 
-                    var path = _environment.WebRootPath + usuDelImagem.Imagem;
-
-                    if (System.IO.File.Exists(path))
+                    if (idUsuario != 0)
                     {
-                        System.IO.File.Delete(path);
+                        usersDAO.UpdateUsuarioImagem(idUsuario, caminhoImagem);
                     }
-                    //Deleta a imagem atual do usuario
-                    if (!Directory.Exists(_environment.WebRootPath + "/uploads/usuario/"))
-                    {
-                        Directory.CreateDirectory(_environment.WebRootPath + "/uploads/usuario/");
-                    }
-                    //using (Stream filestream = System.IO.File.Create(_environment.WebRootPath + "/uploads/usuario/" + idUsuario.ToString() + "tmp" + files.files.FileName))
-                    using (Stream filestream = System.IO.File.Create(_environment.WebRootPath + "/uploads/usuario/" + idUsuario.ToString() + files.files.FileName))
-                    {
-                        string tmpFileName = _environment.WebRootPath + "/uploads/usuario/" + idUsuario.ToString() + "tmp" + files.files.FileName;
-                        string finalFileName = _environment.WebRootPath + "/uploads/usuario/" + idUsuario.ToString() + files.files.FileName;
-                        files.files.CopyTo(filestream);
-                        filestream.Flush();
-
-                        //Reduzir o tamanho da imagem
-                        //util.CompressImage(tmpFileName, finalFileName,true);
-
-                        if (idUsuario != 0)
-                        {
-                            usersDAO.UpdateUsuarioImagem(idUsuario, "/uploads/usuario/" + idUsuario.ToString() + files.files.FileName);
-                        }
-                        return "/uploads/usuario/" + idUsuario.ToString() + files.files.FileName;
-                    }
+                    return caminhoImagem;
                 }
                 catch (Exception ex)
                 {
