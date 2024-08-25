@@ -45,9 +45,9 @@ namespace papya_api.Controllers
             //string mensagem = "Novo pedido";
             foreach (var item in a)
             {
-                mesa = item.MESA;
-                nomeusuario = item.NOME;
-                itens.Append(string.Format(" {0}-{1}, " , item.QTD_ITEM , item.ITEM_TITULO)).ToString();
+                mesa = item.mesa;
+                nomeusuario = item.nome;
+                itens.Append(string.Format(" {0}-{1}, " , item.qtd_item, item.item_titulo)).ToString();
             }
             //var data = (IDictionary<string, object>)a;
             //data["usuario"]

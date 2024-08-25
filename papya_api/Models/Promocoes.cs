@@ -31,6 +31,8 @@ namespace papya_api.Models
         public int TEMPO_ESPERADO_MIN { get; set; }
         public int TEMPO_ESPERADO_MAX { get; set; }
         public string IMAGEM_ITEM { get; set; }
+        public int TOTALITENS { get; set; }
+        
         public int STATUS { get; set; }
         public static explicit operator Promocoes(Task<Cardapio> v)
         {

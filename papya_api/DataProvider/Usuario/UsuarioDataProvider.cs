@@ -192,22 +192,22 @@ namespace papya_api.DataProvider
             using (var conexao = new MySqlConnection(_configuration.GetConnectionString("tingledb")))
             //using (var conexao = new MySqlConnection(strConexao))
             {
-                string sql = "SELECT ";
-                sql += "U.ID,";
-                sql += "U.ID_TIPO_USUARIO, ";
-                sql += "U.NOME, ";
-                sql += "U.SOBRENOME, ";
-                sql += "U.CPF, ";
-                sql += "U.NASCIMENTO, ";
-                sql += "U.STATUSSOCIAL, ";
-                sql += "U.EMAIL, ";
-                sql += "U.IMAGEM, ";
-                sql += "U.TELEFONE, ";
-                sql += "E.NOME AS ESTABELECIMENTONOME,";
-                sql += "E.ENDERECO AS ESTABELECIMENTOENDERECO,";
-                sql += "E.LATITUDE AS ESTABELECIMENTOLATITUDE,";
-                sql += "E.LONGITUDE AS ESTABELECIMENTOLONGITUDE,";
-                sql += "E.IMAGEM AS ESTABELECIMENTOIMAGEM, ";
+                string sql = "select ";
+                sql += "u.id,";
+                sql += "u.id_tipo_usuario, ";
+                sql += "u.nome, ";
+                sql += "u.sobrenome, ";
+                sql += "u.cpf, ";
+                sql += "u.nascimento, ";
+                sql += "u.statussocial, ";
+                sql += "u.email, ";
+                sql += "u.imagem, ";
+                sql += "u.telefone, ";
+                sql += "e.nome as estabelecimentonome,";
+                sql += "e.endereco as estabelecimentoendereco,";
+                sql += "e.latitude as estabelecimentolatitude,";
+                sql += "e.longitude as estabelecimentolongitude,";
+                sql += "e.imagem as estabelecimentoimagem, ";
                 sql += "(" +
                         "acos(sin(radians(latitude))" +
                         "* sin(radians(" + latitude + "))" +
@@ -231,7 +231,7 @@ namespace papya_api.DataProvider
                         "* cos(radians(longitude) " +
                         "- radians(" + longitude + " ))) * 6378 " +
                         ") <=" + distanciaKm;
-                sql += (idEstabelecimento == null ? "" : " AND M.FK_ID_ESTABELECIMENTO = " + idEstabelecimento);
+                sql += (idEstabelecimento == null ? "" : " and m.fk_id_estabelecimento = " + idEstabelecimento);
                 sql += qtdLista == null ? " " : " limit " + qtdLista;
 
                 try

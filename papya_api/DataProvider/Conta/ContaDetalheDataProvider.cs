@@ -227,10 +227,8 @@ namespace papya_api.DataProvider
                 "pi.desconto as item_desconto, " +
                 "p.id as pedido_id, " +
                 "p.datahora as pedido_datahora, " +
-                //"date_add(p.datahora, interval i.tempo_estimado_min minute) as item_prev_min, "+
-                "dateadd(minute, i.tempo_estimado_min, p.datahora) as item_prev_min, " +
-                //"date_add(p.datahora, interval i.tempo_estimado_max minute) as item_prev_max,  "+
-                "dateadd(minute, i.tempo_estimado_max, p.datahora) as item_prev_max, " +
+                "date_add(p.datahora, interval i.tempo_estimado_min minute) as item_prev_min, "+
+                "date_add(p.datahora, interval i.tempo_estimado_max minute) as item_prev_max,  "+
                 "pg.valor valor_pago_conta_usuario, " +
                 "mpg.descricao usuario_meio_pagamento " +
 

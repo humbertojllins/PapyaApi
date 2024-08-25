@@ -41,8 +41,8 @@ namespace papya_api.DataProvider
                         "'" + estabelecimento.Cnpj + "'," +
                         "'" + estabelecimento.Endereco + "'," +
                         "'" + estabelecimento.Numero + "'," +
-                        "" + estabelecimento.Longitude + "," +
-                        "" + estabelecimento.Latitude + "," +
+                        "'" + estabelecimento.Longitude + "'," +
+                        "'" + estabelecimento.Latitude + "'," +
                         "" + estabelecimento.fk_Tipo_Estabelecimento_id + "," +
                         "'" + estabelecimento.Imagem + "'," +
                         "'" + senhaCript + "');";

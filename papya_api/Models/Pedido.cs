@@ -10,11 +10,11 @@ namespace papya_api.Models
     public class Pedido
     {
         [Key]
-        public int ID_USUARIO_CONTA { get; set; }
-        public int ID_ITEM { get; set; }
-        public double QTD_ITEM { get; set; }
-        public int FK_ID_MESA { get; set; }
-        public float DESCONTO { get; set; }
+        public int id_usuario_conta { get; set; }
+        public int id_item { get; set; }
+        public double qtd_item { get; set; }
+        public int fk_id_mesa { get; set; }
+        public float desconto { get; set; }
 
         public static explicit operator Pedido(Task<Pedido> v)
         {
@@ -25,15 +25,15 @@ namespace papya_api.Models
     public class UltimoPedido
     {
         [Key]
-        public string ITEM_TITULO { get; set; }
-        public string ITEM_DESCRICAO { get; set; }
-        public int ID_ITEM { get; set; }
-        public double VALOR_ITEM { get; set; }
-        public double QTD_ITEM { get; set; }
-        public string IMAGEM { get; set; }
-        public string CATEGORIA { get; set; }
-        public string NOME { get; set; }
-        public string MESA { get; set; }
+        public string item_titulo { get; set; }
+        public string item_descricao { get; set; }
+        public int id_item { get; set; }
+        public double valor_item { get; set; }
+        public double qtd_item { get; set; }
+        public string imagem { get; set; }
+        public string categoria { get; set; }
+        public string nome { get; set; }
+        public string mesa { get; set; }
 
         public static explicit operator UltimoPedido(Task<UltimoPedido> v)
         {

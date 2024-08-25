@@ -31,9 +31,14 @@ namespace papya_api.Controllers
         //[Authorize("Bearer")]
         //
         [HttpGet]
-        public object Get(float latitude, float longitude, int? qtdLista, int? idEstabelecimento)
+        public object Get(float latitude, float longitude, int? qtdLista, int? idEstabelecimento, int? status = 1)
         {
-            return this.PromocoesDataProvider.GetPromocoes(latitude, longitude, qtdLista, idEstabelecimento);
+            return this.PromocoesDataProvider.GetPromocoes(latitude, longitude, qtdLista, idEstabelecimento, status);
+        }
+        [HttpGet("{idPromocao}")]
+        public object Get(int idPromocao)
+        {
+            return this.PromocoesDataProvider.GetPromocoes(idPromocao);
         }
 
         [HttpPost]
@@ -74,11 +79,13 @@ namespace papya_api.Controllers
             [FromServices] DataProvider.PromocoesDAO promocoesDAO)
         {
             var ret = this.PromocoesDataProvider.UpdatePromocao(listaPromocoes);
-            if (((Task<int>)ret).IsFaulted)
+            //if (((Task<int>)ret).IsFaulted)
+            if(((Boolean)ret)!=true)
             {
                 return StatusCode(500, new { retorno = "Erro ao atualizar" });
             }
-            return promocoesDAO.Upload(listaPromocoes.First().ID_PROMOCAO, files);
+            //return promocoesDAO.Upload(listaPromocoes.First().ID_PROMOCAO, files);
+            return StatusCode(200, new { retorno = "Sucesso" });
         }
 
         // DELETE api/values/5
@@ -87,6 +94,12 @@ namespace papya_api.Controllers
         public object Delete(int id)
         {
             return this.PromocoesDataProvider.DeletePromocao(id);
+        }
+        //[Authorize("Bearer")]
+        [HttpPut("AtivaPromocao")]
+        public object AtivaPromocao(int id)
+        {
+            return this.PromocoesDataProvider.AtivaPromocao(id);
         }
 
         //[HttpPost]

@@ -33,6 +33,14 @@ namespace papya_api.Controllers
             return await this.estabelecimentoDataProvider.GetEstabelecimento(id);
         }
 
+        [HttpGet("{cnpj}")]
+        public async Task<int> Get(string cnpj)
+        {
+            Estabelecimento e = await this.estabelecimentoDataProvider.GetEstabelecimentoCnpj(cnpj.Replace("%2F", "/"));
+
+            return e == null ? 0 : 1;
+        }
+
         // POST api/values
         //[Authorize("Bearer")]
         [HttpPost]

@@ -33,19 +33,26 @@ namespace papya_api.DataProvider
                 using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
                 {
                     conexao.Open();
-                    var sql = "insert into conta (id_mesa, id_status,abertura_data)" +
-                        " values(" +
-                        "" + idMesa + "," +
-                        "1," +
-                        "getdate());" +
-                        "insert into usuario_conta(id_usuario, id_conta, publico, abriu_conta)" +
-                        " values(" +
-                        "" + idUsuario + "," +
-                        "LAST_INSERT_ID()," +
-                        "" + publico + ",1);";
-                    conexao.ExecuteAsync(sql
-                        , commandType: System.Data.CommandType.Text);
-                    return GetContas(idUsuario).Result;
+                    try
+                    {
+                        var sql = "insert into conta (id_mesa, id_status,abertura_data)" +
+                            " values(" +
+                            "" + idMesa + "," +
+                            "1," +
+                            "sysdate());" +
+                            "insert into usuario_conta(id_usuario, id_conta, publico, abriu_conta)" +
+                            " values(" +
+                            "" + idUsuario + "," +
+                            "LAST_INSERT_ID()," +
+                            "" + publico + ",1);";
+                        conexao.ExecuteScalar(sql
+                            , commandType: System.Data.CommandType.Text);
+                        return GetContas(idUsuario).Result;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
             }
             else
@@ -72,7 +79,7 @@ namespace papya_api.DataProvider
                         "" + idUsuario + "," +
                         "" + idConta + "," +
                         "" + publico + "," +
-                        "1);"; 
+                        "1);";
                     conexao.Execute(sql
                         , commandType: System.Data.CommandType.Text);
                     return GetContas(idUsuario).Result;
@@ -88,7 +95,7 @@ namespace papya_api.DataProvider
 
         }
 
-        public  object DeleteConta(int idConta)
+        public object DeleteConta(int idConta)
         {
             throw new NotImplementedException();
         }
@@ -141,7 +148,7 @@ namespace papya_api.DataProvider
                 " order by c.id desc;";
 
 
-                return await conexao.QueryAsync<object>(sql,
+                return await conexao.QueryAsync<object>(sql, 
                 null,
                 commandType: System.Data.CommandType.Text);
             }
@@ -241,19 +248,19 @@ public async Task<IEnumerable<string>> Getcontas()
 
                 string sql1 = "(select id from usuario_conta where abriu_conta =1 and id_conta =" + idConta + ")";
 
-                string  sql = "insert into PAGAMENTO(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + sql1 + ");";
+                string sql = "insert into PAGAMENTO(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + sql1 + ");";
 
-                        //Atualiza o status da conta para Fechada e adiciona a data do fechamento
-                        sql += "update conta set id_status=" + Convert.ToInt32(StatusConta.Fechada) + ",";
-                        sql += " fechamento_data='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "'";
-                        sql+= " where id=" + idConta + ";";
+                //Atualiza o status da conta para Fechada e adiciona a data do fechamento
+                sql += "update conta set id_status=" + Convert.ToInt32(StatusConta.Fechada) + ",";
+                sql += " fechamento_data='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "'";
+                sql += " where id=" + idConta + ";";
 
-                        //Atualiza o status da conta do usuário
-                        sql += "UPDATE usuario_conta SET status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
-                        sql += " where id_conta=" + idConta + ";";
+                //Atualiza o status da conta do usuário
+                sql += "UPDATE usuario_conta SET status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
+                sql += " where id_conta=" + idConta + ";";
 
 
-                return conexao.Execute(sql,null,commandType: System.Data.CommandType.Text);
+                return conexao.Execute(sql, null, commandType: System.Data.CommandType.Text);
             }
         }
 
@@ -263,17 +270,17 @@ public async Task<IEnumerable<string>> Getcontas()
             {
                 conexao.Open();
 
-                string  sql = "update usuario_conta set status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
-                        sql += " where id=" + idUsuarioConta + ";";
+                string sql = "update usuario_conta set status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
+                sql += " where id=" + idUsuarioConta + ";";
 
-                        sql += "insert into pagamento(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + idUsuarioConta + ");";
+                sql += "insert into pagamento(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + idUsuarioConta + ");";
 
-                        //Se for o último cliente da mesa, fecha a conta total
-                        if (ultimoClienteMesa == true)
-                        {
-                            sql += "update usuario_conta set status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
-                            sql += " where id_conta=" + idConta + ";";
-                        }
+                //Se for o último cliente da mesa, fecha a conta total
+                if (ultimoClienteMesa == true)
+                {
+                    sql += "update usuario_conta set status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
+                    sql += " where id_conta=" + idConta + ";";
+                }
                 return conexao.Execute(sql
                     ,
                     null,
@@ -298,14 +305,14 @@ public async Task<IEnumerable<string>> Getcontas()
                             " from conta c" +
                             " where c.id =" + idConta;
 
-                 totalPagar = conexao.ExecuteScalar(sql,null,commandType: System.Data.CommandType.Text);
+                totalPagar = conexao.ExecuteScalar(sql, null, commandType: System.Data.CommandType.Text);
 
 
-                      sql = "select count(1) " +
-                            " from usuario_conta uc" +
-                            " where uc.id_conta = " + idConta +
-                            " and uc.status_conta_usuario <> 2";
-                 usuariosNaMesa = conexao.ExecuteScalar(sql, null, commandType: System.Data.CommandType.Text);
+                sql = "select count(1) " +
+                      " from usuario_conta uc" +
+                      " where uc.id_conta = " + idConta +
+                      " and uc.status_conta_usuario <> 2";
+                usuariosNaMesa = conexao.ExecuteScalar(sql, null, commandType: System.Data.CommandType.Text);
 
             }
 
@@ -319,7 +326,7 @@ public async Task<IEnumerable<string>> Getcontas()
                 }
             }
             else
-            { 
+            {
                 if (Math.Round(float.Parse(totalPagar.ToString()), 2) < Math.Round(total, 2))
                 {
                     mensagem = "Valor pago maior que o total da conta";
@@ -344,9 +351,9 @@ public async Task<IEnumerable<string>> Getcontas()
 
         public enum StatusConta : int
         {
-            Aberta  = 1,
+            Aberta = 1,
             Fechada = 2,
-            SolicitaPagamento = 3 
+            SolicitaPagamento = 3
         }
     }
 }

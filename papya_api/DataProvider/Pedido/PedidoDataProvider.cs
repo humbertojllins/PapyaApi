@@ -34,8 +34,8 @@ namespace papya_api.DataProvider
                
                 conexao.Open();
 
-                int id_usuario_conta = listaPedido.First().ID_USUARIO_CONTA;
-                int fk_id_mesa = listaPedido.First().FK_ID_MESA;
+                int id_usuario_conta = listaPedido.First().id_usuario_conta;
+                int fk_id_mesa = listaPedido.First().fk_id_mesa;
 
 
                 var sql = "insert into pedido (fk_usuario_conta_id, fk_id_mesa)" +
@@ -49,9 +49,9 @@ namespace papya_api.DataProvider
                     sql += " insert into pedido_itens (id_pedido,fk_status_id, fk_itens_id, qtd,desconto)";
                     sql += " values(" + id_pedido + ", ";
                     sql += "1,";
-                    sql += item.ID_ITEM + ",";
-                    sql += item.QTD_ITEM + ",";
-                    sql += item.DESCONTO + ");";
+                    sql += item.id_item + ",";
+                    sql += item.qtd_item + ",";
+                    sql += item.desconto + ");";
                 }
 
                 sql += " select id_conta from usuario_conta where id =" + id_usuario_conta;
@@ -69,7 +69,7 @@ namespace papya_api.DataProvider
                 //Atualiza os dados pela query
                 conexao.ExecuteScalar(sql, commandType: System.Data.CommandType.Text);
 
-                sql = " select cast(i.id as varchar(10)) as codigo_item, i.titulo as item_titulo, i.descricao as item_descricao, i.valor as valor_item, pit.qtd as qtd_item, i.imagem, c.descricao as categoria ,u.nome, m.descricao as mesa ";
+                sql = " select i.id as codigo_item, i.titulo as item_titulo, i.descricao as item_descricao, i.valor as valor_item, pit.qtd as qtd_item, i.imagem, c.descricao as categoria ,u.nome, m.descricao as mesa ";
                 sql +=" from pedido p";
                 sql += " left join pedido_itens pit on p.id = pit.id_pedido";
                 sql += " left join itens i on pit.fk_itens_id = i.id ";
