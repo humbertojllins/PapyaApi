@@ -8,7 +8,7 @@ namespace papya_api.DataProvider
 {
     public interface INotificacaoDataProvider
     {
-        Task<IEnumerable<Notificacao>> GetNotificacaos(int idEstabelecimento);
+        Task<IEnumerable<Notificacao>> GetNotificacaos(int idEstabelecimento, string client = "");
 
         Task<Notificacao> GetNotificacao(string client);
 
@@ -16,7 +16,7 @@ namespace papya_api.DataProvider
 
         object UpdateNotificacao(Notificacao Notificacao);
 
-        object Notify(int idEstabelecimento, string message);
+        object Notify(int idEstabelecimento, string client, string message);
 
         Task<object> NotificacaoCadastrada(int idEstabelecimento, string client);
 

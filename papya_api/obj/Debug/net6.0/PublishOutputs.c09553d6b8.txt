@@ -19,6 +19,7 @@ C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estab
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\38magali.png
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\391promo_2_sushi.jpg
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\401WhatsApp Image 2020-07-25 at 15.07.13.jpeg
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Estabelecimento\41nossocanto.png
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Promocoes\46Mista-alcatra.png
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Promocoes\47cocalata.png
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\wwwroot\Uploads\Promocoes\48Mista-alcatra.png

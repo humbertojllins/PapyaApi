@@ -8,6 +8,7 @@ using WebPush;
 using System.Linq;
 using papya_api.ExtensionMethods;
 using MySql.Data.MySqlClient;
+using Microsoft.AspNetCore.Mvc;
 
 namespace papya_api.DataProvider
 {
@@ -88,13 +89,15 @@ namespace papya_api.DataProvider
                     commandType: System.Data.CommandType.Text);
             }
         }
-        public async Task<IEnumerable<Notificacao>> GetNotificacaos(int idEstabelecimento)
+        public async Task<IEnumerable<Notificacao>> GetNotificacaos(int idEstabelecimento, string client="")
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
                 string sql = "select * ";
                 sql+= "from notificacao  ";
                 sql += " where fkestabelecimento=" + idEstabelecimento;
+                if(client!=null && client!="")
+                    sql += " and client='" + client + "'";
                 conexao.Open();
                 return await conexao.QueryAsync<Notificacao>(
                 sql,
@@ -121,7 +124,7 @@ namespace papya_api.DataProvider
             }
         }
 
-        public object Notify(int idEstabelecimento, string message)
+        public object Notify(int idEstabelecimento, string client, string message)
         {
             var subject = _configuration["VAPID:subject"];
             var publicKey = _configuration["VAPID:publicKey"];
@@ -130,7 +133,7 @@ namespace papya_api.DataProvider
             var vapidDetails = new VapidDetails(subject, publicKey, privateKey);
 
 
-            List<Notificacao> lista = GetNotificacaos(idEstabelecimento).Result.Cast<Notificacao>().ToList();
+            List<Notificacao> lista = GetNotificacaos(idEstabelecimento, client).Result.Cast<Notificacao>().ToList();
             //List<DadosUsuario> l = GetListaUsuarios().Result.Cast<DadosUsuario>().ToList();
             PushSubscription subscription;
             var webPushClient = new WebPushClient();

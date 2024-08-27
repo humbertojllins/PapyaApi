@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projetos\\PapyaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\notificacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\notificacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\contadetalhecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\contadetalhecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\notificacao\\notificacaodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\notificacao\\notificacaodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,28 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContaDetalheDataProvider.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "RelativeToolTip": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "ViewState": "AQIAAGwBAAAAAAAAAAAQwHUBAAA+AAAA",
+              "Title": "NotificacaoController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\NotificacaoController.cs",
+              "RelativeDocumentMoniker": "papya_api\\Controllers\\NotificacaoController.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\NotificacaoController.cs",
+              "RelativeToolTip": "papya_api\\Controllers\\NotificacaoController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwC8AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T19:42:09.615Z",
+              "WhenOpened": "2024-08-27T13:20:18.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContaDetalheController.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaDetalheController.cs",
-              "RelativeDocumentMoniker": "papya_api\\Controllers\\ContaDetalheController.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaDetalheController.cs",
-              "RelativeToolTip": "papya_api\\Controllers\\ContaDetalheController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwB8AAABFAAAA",
+              "Title": "NotificacaoDataProvider.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAiwIIAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T19:41:51.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T12:50:46.84Z"
             }
           ]
         }
