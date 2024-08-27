@@ -7,13 +7,13 @@ namespace papya_api.Models
     public class Funcionario
     {
         [Key]
-        public int ID { get; set; }
-        public int ID_USUARIO { get; set; }
-        public int ID_ESTABELECIMENTO { get; set; }
-        public double SALARIO { get; set; }
-        public int ID_TIPOFUNCIONARIO { get; set; }
-        public string NomeEstabelecimento { get; set; }
-        public string ImagemEstabelecimento { get; set; }
+        public int id { get; set; }
+        public int id_usuario { get; set; }
+        public int id_estabelecimento { get; set; }
+        public double salario { get; set; }
+        public int id_tipofuncionario { get; set; }
+        public string nomeestabelecimento { get; set; }
+        public string imagemestabelecimento { get; set; }
 
         public static explicit operator Funcionario(Task<Funcionario> v)
         {

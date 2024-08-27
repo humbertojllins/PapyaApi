@@ -40,7 +40,7 @@ namespace papya_api.Controllers
         [HttpPost]
         public object Post([FromBody] Funcionario funcionario)
         {
-            var retorno = this.FuncionarioDataProvider.AddFuncionario(funcionario.ID_ESTABELECIMENTO, funcionario.ID_USUARIO, funcionario.ID_TIPOFUNCIONARIO);
+            var retorno = this.FuncionarioDataProvider.AddFuncionario(funcionario.id_estabelecimento, funcionario.id_usuario, funcionario.id_tipofuncionario);
             if(retorno.ToString().Contains("406"))
             {
                 return StatusCode(406, "Funcionário já cadastrado" );
