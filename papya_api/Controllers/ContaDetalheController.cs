@@ -27,7 +27,7 @@ namespace papya_api.Controllers
         }
 
         [HttpGet("GetByEstabelecimento")]
-        public object GetByEstabelecimento(int idEstabelecimento, int? idFuncionario, int? is_cozinha, int? status_conta, int? status_item)
+        public object GetByEstabelecimento(int idEstabelecimento, int? idFuncionario, int? is_cozinha, string? status_conta, string? status_item)
         {
             return this.ContaDetalheDataProvider.GetDetalheContasNovo(idEstabelecimento, idFuncionario,is_cozinha, status_conta, status_item);
         }

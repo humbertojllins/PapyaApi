@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Projetos\\PapyaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\notificacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\notificacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\conta\\contadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\conta\\contadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\notificacao\\notificacaodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\notificacao\\notificacaodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\contacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\contacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +39,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NotificacaoController.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\NotificacaoController.cs",
-              "RelativeDocumentMoniker": "papya_api\\Controllers\\NotificacaoController.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\NotificacaoController.cs",
-              "RelativeToolTip": "papya_api\\Controllers\\NotificacaoController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAIwC8AAAA9AAAA",
+              "Title": "ContaDataProvider.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
+              "ViewState": "AQIAAAUBAAAAAAAAAAAUwAoBAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T13:20:18.717Z",
+              "WhenOpened": "2024-08-30T13:23:42.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContaDetalheDataProvider.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAAAAQBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T13:05:14.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NotificacaoDataProvider.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
-              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
-              "RelativeToolTip": "papya_api\\DataProvider\\Notificacao\\NotificacaoDataProvider.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAiwIIAAABAAAAA",
+              "Title": "ContaController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaController.cs",
+              "RelativeDocumentMoniker": "papya_api\\Controllers\\ContaController.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaController.cs",
+              "RelativeToolTip": "papya_api\\Controllers\\ContaController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAqwGAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T12:50:46.84Z"
+              "WhenOpened": "2024-08-29T00:27:01.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Conta.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\Conta.cs",
+              "RelativeDocumentMoniker": "papya_api\\Models\\Conta.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\Conta.cs",
+              "RelativeToolTip": "papya_api\\Models\\Conta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T13:26:30.168Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace papya_api.DataProvider
 {
-    public class ContaDetalheDataProvider:IContaDetalheDataProvider
+    public class ContaDetalheDataProvider : IContaDetalheDataProvider
     {
 
         private readonly IConfiguration _configuration;
@@ -72,7 +72,7 @@ namespace papya_api.DataProvider
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
-                 conexao.Open();
+                conexao.Open();
 
                 string sql = "select " +
                 "c.id as num_conta, " +
@@ -122,14 +122,14 @@ namespace papya_api.DataProvider
                     string js = "[{";
 
                     js += "\"num_conta\":" + x.First().NUM_CONTA + ",";
-                    js += "\"valor_total_conta\":" +  x.First().VALOR_TOTAL_CONTA + ",";
+                    js += "\"valor_total_conta\":" + x.First().VALOR_TOTAL_CONTA + ",";
                     js += "\"desc_mesa\":" + "\"" + x.First().DESC_MESA + "\",";
 
                     var listaUsuarios = from a in x
-                                     group a by a.USUARIO_ID into newGroup
-                                     orderby newGroup.Key
-                                     select newGroup;
-                    double totalPago=0;
+                                        group a by a.USUARIO_ID into newGroup
+                                        orderby newGroup.Key
+                                        select newGroup;
+                    double totalPago = 0;
                     foreach (var item in listaUsuarios)
                     {
                         totalPago += item.First().VALOR_PAGO_CONTA_USUARIO;
@@ -173,7 +173,7 @@ namespace papya_api.DataProvider
                             js += "\"item_DESCONTO\":" + i.ITEM_DESCONTO;
                             js += "}";
                             loopItens += 1;
-                            
+
                         }
                         loopUsuarios += 1;
                         js += "]";
@@ -197,7 +197,7 @@ namespace papya_api.DataProvider
         /// <param name="id_estabelecimento"></param>
         /// /// <param name="is_cozinha"></param>
         /// <returns></returns>
-        public object GetDetalheContasNovo(int id_estabelecimento, int? idFuncionario, int? is_cozinha, int? status_conta, int? statusItem)
+        public object GetDetalheContasNovo(int id_estabelecimento, int? idFuncionario, int? is_cozinha, string? status_conta, string? statusItem)
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
@@ -227,10 +227,11 @@ namespace papya_api.DataProvider
                 "pi.desconto as item_desconto, " +
                 "p.id as pedido_id, " +
                 "p.datahora as pedido_datahora, " +
-                "date_add(p.datahora, interval i.tempo_estimado_min minute) as item_prev_min, "+
-                "date_add(p.datahora, interval i.tempo_estimado_max minute) as item_prev_max,  "+
+                "date_add(p.datahora, interval i.tempo_estimado_min minute) as item_prev_min, " +
+                "date_add(p.datahora, interval i.tempo_estimado_max minute) as item_prev_max,  " +
                 "pg.valor valor_pago_conta_usuario, " +
-                "mpg.descricao usuario_meio_pagamento " +
+                "mpg.descricao usuario_meio_pagamento, " +
+                "uc.abriu_conta as usuario_abriu_conta " +
 
                 "from conta c " +
                 "left join status_conta sc on sc.id = c.id_status " +
@@ -251,9 +252,10 @@ namespace papya_api.DataProvider
                 " where m.fk_id_estabelecimento=" + id_estabelecimento;
 
                 sql += (idFuncionario == null ? "" : " and fm.fk_id_funcionario =" + idFuncionario);
-                sql += (status_conta  == null ? "" : " and c.id_status =" + status_conta);
-                sql += (is_cozinha    == null ? "" : " and i.is_cozinha =" + is_cozinha);
-                sql += (statusItem == null ? "" : " and pi.fk_status_id =" + statusItem);
+                sql += (status_conta == null ? "" : " and c.id_status IN(" + status_conta + ")");
+                sql += (is_cozinha == null ? "" : " and i.is_cozinha =" + is_cozinha);
+                //sql += (statusItem == null ? "" : " and pi.fk_status_id =" + statusItem);
+                sql += (statusItem == null ? "" : " and pi.fk_status_id in(" + statusItem + ")");
 
 
                 IEnumerable<ContaDetalhe> x = conexao.Query<ContaDetalhe>(sql,
@@ -270,7 +272,7 @@ namespace papya_api.DataProvider
 
 
                     string js = "{\"contas\":[";
-                    
+
                     int loopConta = 0;
                     foreach (var conta in listaContas)
                     {
@@ -285,6 +287,7 @@ namespace papya_api.DataProvider
                         js += "\"status_conta\":" + "\"" + conta.First().STATUS_CONTA + "\",";
                         js += "\"desc_mesa\":" + "\"" + conta.First().DESC_MESA + "\",";
                         js += "\"garcom\":" + "\"" + conta.First().NOME_FUNCIONARIO + "\",";
+                        js += "\"usuario_principal\":" + "\"" + conta.First(cli=>cli.USUARIO_ABRIU_CONTA==1).NOME_USUARIO + "\",";
 
                         var listaUsuarios = from a in conta
                                             group a by a.USUARIO_ID into newGroup
@@ -298,6 +301,7 @@ namespace papya_api.DataProvider
                         }
 
                         js += "\"valor_total_pago\":" + totalPago + ",";
+                        
 
                         int loopUsuarios = 0;
                         js += "\"usuarios\":[";
@@ -317,14 +321,14 @@ namespace papya_api.DataProvider
                             js += "\"status_conta_usuario\":" + "\"" + item.First().STATUS_CONTA_USUARIO + "\",";
 
                             var listaPedidos = from a in item
-                                                group a by a.PEDIDO_ID into newGroup
-                                                orderby newGroup.Key
-                                                select newGroup;
+                                               group a by a.PEDIDO_ID into newGroup
+                                               orderby newGroup.Key
+                                               select newGroup;
                             js += "\"pedidos\":[";
                             int loopPedidos = 0;
                             foreach (var ped in listaPedidos)
                             {
-                                if(loopPedidos>0)
+                                if (loopPedidos > 0)
                                     js += ",";
 
                                 js += "{";
@@ -353,7 +357,7 @@ namespace papya_api.DataProvider
                                         js += "\"item_status\":" + "\"" + i.ITEM_STATUS + "\",";
                                         js += "\"item_id\":" + i.ITEM_PEDIDOITEM_ID + ",";
                                         js += "\"item_desconto\":" + i.ITEM_DESCONTO + ",";
-                                        js += "\"item_VALOR_DESCONTO\":" + (i.ITEM_DESCONTO >0?(i.ITEM_VALOR -(i.ITEM_VALOR*i.ITEM_DESCONTO)):i.ITEM_VALOR) + ",";
+                                        js += "\"item_VALOR_DESCONTO\":" + (i.ITEM_DESCONTO > 0 ? (i.ITEM_VALOR - (i.ITEM_VALOR * i.ITEM_DESCONTO)) : i.ITEM_VALOR) + ",";
                                         js += "\"item_is_cozinha\":" + i.ITEM_IS_COZINHA + ",";
                                         js += "\"item_prev_min\":" + "\"" + i.ITEM_PREV_MIN + "\",";
                                         js += "\"item_prev_max\":" + "\"" + i.ITEM_PREV_MAX + "\"";

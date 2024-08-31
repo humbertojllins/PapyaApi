@@ -248,7 +248,7 @@ public async Task<IEnumerable<string>> Getcontas()
 
                 string sql1 = "(select id from usuario_conta where abriu_conta =1 and id_conta =" + idConta + ")";
 
-                string sql = "insert into PAGAMENTO(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + sql1 + ");";
+                string sql = "insert into pagamento(valor,fk_id_meio_pagamento,fk_usuario_conta_id) values(" + total + "," + meioPagamento + "," + sql1 + ");";
 
                 //Atualiza o status da conta para Fechada e adiciona a data do fechamento
                 sql += "update conta set id_status=" + Convert.ToInt32(StatusConta.Fechada) + ",";
@@ -278,8 +278,8 @@ public async Task<IEnumerable<string>> Getcontas()
                 //Se for o último cliente da mesa, fecha a conta total
                 if (ultimoClienteMesa == true)
                 {
-                    sql += "update usuario_conta set status_conta_usuario =" + Convert.ToInt32(StatusConta.Fechada);
-                    sql += " where id_conta=" + idConta + ";";
+                    sql += "update conta set id_status =" + Convert.ToInt32(StatusConta.Fechada);
+                    sql += " where id=" + idConta + ";";
                 }
                 return conexao.Execute(sql
                     ,
@@ -297,7 +297,7 @@ public async Task<IEnumerable<string>> Getcontas()
                 conexao.Open();
 
                 string sql = "select c.total - " +
-                            "(select isnull(sum(p.valor),0)" +
+                            "(select ifnull(sum(p.valor),0)" +
                             " from usuario_conta uc" +
                             " left join pagamento p on p.fk_usuario_conta_id = uc.id and uc.status_conta_usuario = 2" +
                             " where  uc.id_conta = c.id" +

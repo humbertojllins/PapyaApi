@@ -34,6 +34,7 @@ namespace papya_api.Models
         public DateTime ITEM_PREV_MAX { get; set; }
         public double VALOR_PAGO_CONTA_USUARIO { get; set; }
         public string USUARIO_MEIO_PAGAMENTO { get; set; }
+        public int USUARIO_ABRIU_CONTA { get; set; }
 
 
         public static explicit operator ContaDetalhe(Task<ContaDetalhe> v)

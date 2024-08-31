@@ -8,7 +8,7 @@ namespace papya_api.DataProvider
     public interface IContaDetalheDataProvider
     {
         object GetDetalheContas(int id_conta);
-        object GetDetalheContasNovo(int id_estabelecimento, int? idFuncionario, int? is_cozinha, int? status_conta, int? statusItem);
+        object GetDetalheContasNovo(int id_estabelecimento, int? idFuncionario, int? is_cozinha, string? status_conta, string? statusItem);
         
     }
 }

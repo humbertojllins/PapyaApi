@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("papya_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b78beecbc8bc2e2b508d54654652548fa466f84d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8de9799ef95a655833e2edecbb49b710e39d568f")]
 [assembly: System.Reflection.AssemblyProductAttribute("papya_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("papya_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
