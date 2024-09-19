@@ -82,7 +82,7 @@ namespace papya_api.DataProvider
                     //Recupera os dados da imagem atual para deletar se for update
                     Promocoes promocoesDelImagem = ImagemAtual(id);
 
-                    var caminhoImagem = util.UploadImage(promocoesDelImagem.IMAGEM, id, _environment.WebRootPath, Global.PathEntidade.Promocao, files);
+                    var caminhoImagem = util.UploadImage(promocoesDelImagem.IMAGEM, id, _configuration.GetSection("imageURL:PATH").Value, Global.PathEntidade.Promocao, files);
 
                     //    //Reduzir o tamanho da imagem
                     //    util.CompressImage(tmpFileName, finalFileName, false);

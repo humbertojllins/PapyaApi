@@ -53,9 +53,9 @@ namespace papya_api.Controllers
         // POST api/values
         //[Authorize("Bearer")]
         [HttpPost("Notify")]
-        public object Notify(int idEstabelecimento, string client, string message)
+        public object Notify(int idEstabelecimento, string message, string client)
         {
-            return this.NotificacaoDataProvider.Notify(idEstabelecimento,client, message);
+            return this.NotificacaoDataProvider.Notify(idEstabelecimento, message, client);
         }
 
     }

@@ -78,8 +78,8 @@ namespace papya_api
                     {
                         builder.WithOrigins(
                             "https://papya.com.br",
-                            "https://www.papya.com.br"
-                        //    "https://localhost:5002",
+                            "https://www.papya.com.br",
+                            "https://localhost:5002"
                         //    "http://localhost:3000",
                         //    "http://192.168.5.180:3000",
                         //    "http://192.168.5.180",
@@ -200,6 +200,7 @@ namespace papya_api
             //Configuraçoes para acesso a imagens estaticas
             app.UseStaticFiles();// For the wwwroot folder
 
+
             app.UseCors(MyAllowSpecifyOrigins);
 
 
@@ -260,10 +261,12 @@ namespace papya_api
             services.AddScoped<ITipoFuncionarioDataProvider, TipoFuncionarioDataProvider>();
             services.AddScoped<IFuncionarioDataProvider, FuncionarioDataProvider>();
             services.AddScoped<IStatusItemDataProvider, StatusItemDataProvider>();
-            services.AddScoped<IMesaDataProvider, MesaDataProvider>();
+            services.AddScoped<IAssinaturaDataProvider, AssinaturaDataProvider>();
             services.AddScoped<IFuncionarioMesaDataProvider, FuncionarioMesaDataProvider>();
             services.AddScoped<IMeioPagamentoDataProvider, MeioPagamentoDataProvider>();
+            services.AddScoped<IMesaDataProvider, MesaDataProvider>();
             services.AddScoped<INotificacaoDataProvider, NotificacaoDataProvider>();
+            
         }
 
         private static void ConfigSwaggerDoc(IServiceCollection services, string pSwConfig)

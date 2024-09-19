@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Projetos\\PapyaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\conta\\contadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\conta\\contadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\models\\pushhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\models\\pushhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\contacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\contacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\conta\\contadetalhedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\pedido\\pedidodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\pedido\\pedidodataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\services\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\services\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\imageestabelecimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\imageestabelecimentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\cardapio\\cardapiodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\cardapio\\cardapiodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|c:\\projetos\\papyaapi\\papya_api\\dataprovider\\promocoes\\promocoesdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E7D6855-1C34-43A3-B72D-045537F7E290}|papya_api\\papya_api.csproj|solutionrelative:papya_api\\dataprovider\\promocoes\\promocoesdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +59,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContaDataProvider.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
-              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
-              "RelativeToolTip": "papya_api\\DataProvider\\Conta\\ContaDataProvider.cs",
-              "ViewState": "AQIAAAUBAAAAAAAAAAAUwAoBAACBAAAA",
+              "Title": "PushHub.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\PushHub.cs",
+              "RelativeDocumentMoniker": "papya_api\\Models\\PushHub.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\PushHub.cs*",
+              "RelativeToolTip": "papya_api\\Models\\PushHub.cs*",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T13:23:42.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContaDetalheDataProvider.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "RelativeToolTip": "papya_api\\DataProvider\\Conta\\ContaDetalheDataProvider.cs",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAAAAQBAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:05:14.361Z",
+              "WhenOpened": "2024-09-18T13:54:21.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContaController.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaController.cs",
-              "RelativeDocumentMoniker": "papya_api\\Controllers\\ContaController.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ContaController.cs",
-              "RelativeToolTip": "papya_api\\Controllers\\ContaController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAqwGAAAAAIAAAA",
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "papya_api\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\PedidoController.cs*",
+              "RelativeToolTip": "papya_api\\Controllers\\PedidoController.cs*",
+              "ViewState": "AQIAAEMAAAAAAAAAAAApwFIAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T00:27:01.872Z",
+              "WhenOpened": "2024-09-17T18:41:09.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Conta.cs",
-              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\Conta.cs",
-              "RelativeDocumentMoniker": "papya_api\\Models\\Conta.cs",
-              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Models\\Conta.cs",
-              "RelativeToolTip": "papya_api\\Models\\Conta.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Title": "PedidoDataProvider.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Pedido\\PedidoDataProvider.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Pedido\\PedidoDataProvider.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Pedido\\PedidoDataProvider.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Pedido\\PedidoDataProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:26:30.168Z",
+              "WhenOpened": "2024-09-18T13:37:31.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PromocoesDAO.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Promocoes\\PromocoesDAO.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Promocoes\\PromocoesDAO.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Promocoes\\PromocoesDAO.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Promocoes\\PromocoesDAO.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAEwBIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T19:52:32.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CardapioDAO.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Cardapio\\CardapioDAO.cs",
+              "RelativeDocumentMoniker": "papya_api\\DataProvider\\Cardapio\\CardapioDAO.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\DataProvider\\Cardapio\\CardapioDAO.cs",
+              "RelativeToolTip": "papya_api\\DataProvider\\Cardapio\\CardapioDAO.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T19:50:49.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImageEstabelecimentoController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ImageEstabelecimentoController.cs",
+              "RelativeDocumentMoniker": "papya_api\\Controllers\\ImageEstabelecimentoController.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ImageEstabelecimentoController.cs",
+              "RelativeToolTip": "papya_api\\Controllers\\ImageEstabelecimentoController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAEwBIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:41:08.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Startup.cs",
+              "RelativeDocumentMoniker": "papya_api\\Startup.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Startup.cs",
+              "RelativeToolTip": "papya_api\\Startup.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAADgvy0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:55:18.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "papya_api\\Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "papya_api\\Controllers\\ImageController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAlwCMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:31:52.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Global.cs",
+              "DocumentMoniker": "C:\\Projetos\\PapyaApi\\papya_api\\Services\\Global.cs",
+              "RelativeDocumentMoniker": "papya_api\\Services\\Global.cs",
+              "ToolTip": "C:\\Projetos\\PapyaApi\\papya_api\\Services\\Global.cs",
+              "RelativeToolTip": "papya_api\\Services\\Global.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAlwGYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:30:39.186Z",
               "EditorCaption": ""
             }
           ]

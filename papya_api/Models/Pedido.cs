@@ -16,6 +16,7 @@ namespace papya_api.Models
         public int fk_id_mesa { get; set; }
         public float desconto { get; set; }
 
+
         public static explicit operator Pedido(Task<Pedido> v)
         {
             throw new NotImplementedException();
@@ -34,6 +35,8 @@ namespace papya_api.Models
         public string categoria { get; set; }
         public string nome { get; set; }
         public string mesa { get; set; }
+        public int idestabelecimento { get; set; }
+        
 
         public static explicit operator UltimoPedido(Task<UltimoPedido> v)
         {

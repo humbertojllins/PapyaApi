@@ -5,6 +5,7 @@ using ImageMagick;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using papya_api.DataProvider;
 using papya_api.Models;
 using papya_api.Services;
@@ -17,9 +18,11 @@ namespace papya_api.Controllers
     {
         public static IHostingEnvironment _environment;
         Global util = new Global();
-        public ImageEstabelecimentoController(IHostingEnvironment environment)
+        public IConfiguration _configuration { get; }
+        public ImageEstabelecimentoController(IHostingEnvironment environment, IConfiguration configuration)
         {
             _environment = environment;
+            _configuration = configuration;
         }
         public class FIleUploadAPI
         {
@@ -37,7 +40,7 @@ namespace papya_api.Controllers
                 {
                     //Recupera a os dados de imagem atual do usuário
                     Estabelecimento estDelImagem = estabelecimentoDAO.ImagemAtual(idEstabelecimento);
-                    var caminhoImagem = util.UploadImage(estDelImagem.Imagem, idEstabelecimento, _environment.WebRootPath, Global.PathEntidade.Estabelecimento, files.files);
+                    var caminhoImagem = util.UploadImage(estDelImagem.Imagem, idEstabelecimento, _configuration.GetSection("imageURL:PATH").Value, Global.PathEntidade.Estabelecimento, files.files);
 
                     if (idEstabelecimento != 0)
                     {

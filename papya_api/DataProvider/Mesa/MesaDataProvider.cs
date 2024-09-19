@@ -6,7 +6,6 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using papya_api.ExtensionMethods;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto;
 
 namespace papya_api.DataProvider
 {
@@ -15,10 +14,10 @@ namespace papya_api.DataProvider
 
         private readonly IConfiguration _configuration;
 
-        public MesaDataProvider()
-        {
+        //public MesaDataProvider()
+        //{
 
-        }
+        //}
 
         public MesaDataProvider(IConfiguration configuration)
         {
@@ -55,7 +54,7 @@ namespace papya_api.DataProvider
                     ret = conexao.Execute(sql, commandType: System.Data.CommandType.Text);
                 }
                 return ret;
-                
+
             }
         }
 
@@ -68,7 +67,7 @@ namespace papya_api.DataProvider
                 var sql = "update mesa set status=0" +
                     " where id=" + CodMesa.ToString();
 
-                ret= conexao.Execute(sql
+                ret = conexao.Execute(sql
                     , commandType: System.Data.CommandType.Text);
                 conexao.Close();
             }
@@ -109,7 +108,7 @@ namespace papya_api.DataProvider
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
                 string sql = "select m.id, m.descricao, m.fk_id_estabelecimento,f.id as fk_Id_funcionario,fm.id as id_funcionario_mesa , u.nome AS nome_funcionario ";
-                sql+= "from mesa m ";
+                sql += "from mesa m ";
                 sql += "left join funcionarios_mesa fm on m.id = fm.fk_id_mesa ";
                 sql += "left join funcionario f on f.id = fm.fk_id_funcionario ";
                 sql += "left join usuario u on u.id = f.id_usuario ";
@@ -122,7 +121,7 @@ namespace papya_api.DataProvider
             }
         }
 
-        public object UpdateMesa(Mesa mesa) 
+        public object UpdateMesa(Mesa mesa)
         {
             object ret;
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
@@ -142,17 +141,18 @@ namespace papya_api.DataProvider
                 {
                     throw ex;
                 }
-                finally {
+                finally
+                {
                     var sql = "delete from funcionarios_mesa where fk_id_mesa =" + mesa.Id + ";";
-                     sql += "insert into funcionarios_mesa (fk_id_funcionario, fk_id_mesa)" +
-                    " values(" +
-                    mesa.fk_Id_funcionario + "," +
-                    mesa.Id + ")";
+                    sql += "insert into funcionarios_mesa (fk_id_funcionario, fk_id_mesa)" +
+                   " values(" +
+                   mesa.fk_Id_funcionario + "," +
+                   mesa.Id + ")";
 
                     ret = conexao.Execute(sql, commandType: System.Data.CommandType.Text);
                 }
-                
-            }            
+
+            }
             return ret;
         }
     }

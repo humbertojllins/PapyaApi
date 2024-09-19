@@ -66,7 +66,7 @@ namespace papya_api.DataProvider
                     conexao.ExecuteScalar(sql, commandType: System.Data.CommandType.Text);
                 }
 
-                return "Ok";
+                return idEstabelecimento;
 
             }
         }

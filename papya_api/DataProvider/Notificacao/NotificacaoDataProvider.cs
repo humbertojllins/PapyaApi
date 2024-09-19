@@ -9,6 +9,8 @@ using System.Linq;
 using papya_api.ExtensionMethods;
 using MySql.Data.MySqlClient;
 using Microsoft.AspNetCore.Mvc;
+using Amazon.SimpleEmail.Model;
+using System.Net.Http.Json;
 
 namespace papya_api.DataProvider
 {
@@ -123,8 +125,7 @@ namespace papya_api.DataProvider
                 return ret;
             }
         }
-
-        public object Notify(int idEstabelecimento, string client, string message)
+        public object Notify(int idEstabelecimento, string message, string? client = null)
         {
             var subject = _configuration["VAPID:subject"];
             var publicKey = _configuration["VAPID:publicKey"];
@@ -135,6 +136,8 @@ namespace papya_api.DataProvider
 
             List<Notificacao> lista = GetNotificacaos(idEstabelecimento, client).Result.Cast<Notificacao>().ToList();
             //List<DadosUsuario> l = GetListaUsuarios().Result.Cast<DadosUsuario>().ToList();
+
+
             PushSubscription subscription;
             var webPushClient = new WebPushClient();
             foreach (var item in lista)
@@ -144,6 +147,7 @@ namespace papya_api.DataProvider
                 try
                 {
                     webPushClient.SendNotification(subscription, message, vapidDetails);
+                    
                 }
                 catch (Exception ex)
                 {

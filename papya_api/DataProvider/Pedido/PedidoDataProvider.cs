@@ -69,7 +69,7 @@ namespace papya_api.DataProvider
                 //Atualiza os dados pela query
                 conexao.ExecuteScalar(sql, commandType: System.Data.CommandType.Text);
 
-                sql = " select i.id as codigo_item, i.titulo as item_titulo, i.descricao as item_descricao, i.valor as valor_item, pit.qtd as qtd_item, i.imagem, c.descricao as categoria ,u.nome, m.descricao as mesa ";
+                sql = " select i.id as codigo_item, i.titulo as item_titulo, i.descricao as item_descricao, i.valor as valor_item, pit.qtd as qtd_item, i.imagem, c.descricao as categoria ,u.nome, m.descricao as mesa, m.fk_id_estabelecimento idestabelecimento ";
                 sql +=" from pedido p";
                 sql += " left join pedido_itens pit on p.id = pit.id_pedido";
                 sql += " left join itens i on pit.fk_itens_id = i.id ";

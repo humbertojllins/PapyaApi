@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Amazon.SimpleEmail.Model;
 using Microsoft.AspNetCore.SignalR;
 
 namespace papya_api.Models
@@ -10,11 +11,15 @@ namespace papya_api.Models
     {
         //[EnableCors("PolicySignalr")]
         //[DisableCors]
-        //public async Task SendMessage(string user, string message)
-        //{
-        //    await Clients.All.SendAsync("ReceiveMessage", user, message);
-        //}
+        public async Task SendMessage(string user, string message)
+        {
+            await Clients.All.SendAsync("ReceiveMessage", user, message);
+        }
 
+        public async Task SendMessageToUser(string userFrom, string userTo, string message)
+        {   
+            await Clients.Group(userTo).SendAsync("ReceiveMessage", userFrom, message);
+        }
 
         //public static ConcurrentDictionary<string, List<string>> ConnectedUsers;
 
@@ -27,7 +32,6 @@ namespace papya_api.Models
         {
             var userToken = Context.GetHttpContext().Request.Query["access_token"];
             Groups.AddToGroupAsync(Context.ConnectionId, userToken);
-            
 
             //string userid = Context.User.Identity.Name;
             //if (userid == null || userid.Equals(string.Empty))
@@ -58,8 +62,5 @@ namespace papya_api.Models
             //List<string> data = ConnectedUsers.Keys;
             await Clients.All.SendAsync("ListConnectedUsers", "sasasas");
         }
-
-
-
     }
 }

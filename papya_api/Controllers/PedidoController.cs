@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -14,16 +15,18 @@ namespace papya_api.Controllers
     public class PedidoController:Controller
     {
         public IPedidoDataProvider PedidoDataProvider;
-        public IMesaDataProvider MesaDataProvider;
+        public IAssinaturaDataProvider MesaDataProvider;
         public IUsuarioDataProvider UsuarioDataProvider;
         private readonly IHubContext<PushHub> _hubContext;
+        private INotificacaoDataProvider _notificacaoDataProvider;
 
-        public PedidoController(IPedidoDataProvider pedidoDataProvider, IHubContext<PushHub> hubcontext, IMesaDataProvider mesaDataProvider, IUsuarioDataProvider usuarioDataprovider)
+        public PedidoController(IPedidoDataProvider pedidoDataProvider, IHubContext<PushHub> hubcontext, IAssinaturaDataProvider mesaDataProvider, IUsuarioDataProvider usuarioDataprovider, INotificacaoDataProvider notificacaoDataProvider)
         {
             this.PedidoDataProvider = pedidoDataProvider;
             this.MesaDataProvider = mesaDataProvider;
             this.UsuarioDataProvider = usuarioDataprovider;
             _hubContext = hubcontext;
+            _notificacaoDataProvider = notificacaoDataProvider;
         }
 
         //[Authorize("Bearer")]
@@ -40,21 +43,34 @@ namespace papya_api.Controllers
         public object Post([FromBody] IEnumerable<Pedido> lista)
         {
             var a = this.PedidoDataProvider.AddPedido(lista) as IEnumerable<UltimoPedido>;
+            int idestabelecimento = 0;
             string nomeusuario="", mesa = "";
             StringBuilder itens = new StringBuilder();
             //string mensagem = "Novo pedido";
             foreach (var item in a)
             {
+                idestabelecimento = item.idestabelecimento;
                 mesa = item.mesa;
                 nomeusuario = item.nome;
                 itens.Append(string.Format(" {0}-{1}, " , item.qtd_item, item.item_titulo)).ToString();
             }
-            //var data = (IDictionary<string, object>)a;
-            //data["usuario"]
-            //data["mesa"]
-            //data["estabelecimento"]
-            string mensagem = nomeusuario + " da mesa " + mesa + ", solicitou : " + itens;
-            this._hubContext.Clients.All.SendAsync("ReceiveMessage",nomeusuario , mensagem);
+            itens.ToString().Remove(itens.ToString().LastIndexOf(","), 1);
+            //var payload = new JavaScriptSerializer().Serialize(new
+            //{
+            //    notification = new
+            //    {
+            //        title = obj.payload.title,
+            //        body = obj.payload.body,
+            //        icon = obj.payload.icon,
+            //        vibrate = obj.payload.vibrate,
+            //    }
+            //});
+            string mensagem = nomeusuario + " da mesa " + mesa + ", solicitou : " + itens.ToString().Remove(itens.ToString().LastIndexOf(","), 1);
+            _notificacaoDataProvider.Notify(idestabelecimento, mensagem);
+            
+
+
+            //this._hubContext.Clients.All.SendAsync("ReceiveMessage",nomeusuario , mensagem);
             return a;
         }
 
@@ -64,12 +80,7 @@ namespace papya_api.Controllers
         public object PostPedidoSignalR(string mesa, string mensagem)
         {
             var a = "Sucesso";
-            //this._hubContext.Clients.All.SendAsync("ReceiveMessage", mesa,mensagem);
-            //this._hubContext.Clients.Groups().SendAsync("ReceiveMessage", mesa, mensagem);
             this._hubContext.Clients.Group(mesa).SendAsync("ReceiveMessage", mesa, mensagem);
-            //this._hubContext.Clients.Users("").SendAsync("ReceiveMessage", mesa, mensagem);
-            //this._hubContext.Clients.User("").SendAsync("ReceiveMessage", mesa, mensagem);
-
             return a;
         }
 

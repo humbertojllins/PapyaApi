@@ -7,8 +7,6 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'papya_api.' " />
   <ItemGroup>
-    <Folder Include="DataProvider\" />
-    <Folder Include="Models\" />
     <Folder Include="DataProvider\TipoUsuarioPasta\" />
     <Folder Include="DataProvider\Usuario\" />
     <Folder Include="DataProvider\Conta\" />
