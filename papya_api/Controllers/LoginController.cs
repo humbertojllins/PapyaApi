@@ -47,8 +47,7 @@ namespace papya_api.Controllers
                     );
 
                     DateTime dataCriacao = DateTime.Now;
-                    DateTime dataExpiracao = dataCriacao +  
-                        TimeSpan.FromSeconds(tokenConfigurations.Seconds);
+                    DateTime dataExpiracao = dataCriacao.AddDays(30);//  + TimeSpan.FromSeconds(tokenConfigurations.Seconds);
 
                     var handler = new JwtSecurityTokenHandler();
                     var securityToken = handler.CreateToken(new SecurityTokenDescriptor

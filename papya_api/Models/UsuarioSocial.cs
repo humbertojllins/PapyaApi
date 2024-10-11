@@ -25,6 +25,9 @@ namespace papya_api.Models
         public float EstabelecimentoLongitude { get; set; }
         public string EstabelecimentoImagem { get; set; }
         public float DistanciaKm { get; set; }
+        public DateTime? DataLeitura { get; set; }
+        public int qtdmensagem { get; set; }
+        
 
         public static explicit operator UsuarioSocial(Task<UsuarioSocial> v)
         {

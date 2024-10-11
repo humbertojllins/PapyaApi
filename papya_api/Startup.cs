@@ -20,6 +20,8 @@ using System.IO;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using Google.Protobuf.WellKnownTypes;
+using System.Threading.Tasks;
 
 [assembly: OwinStartup(typeof(papya_api.Startup))]
 namespace papya_api
@@ -133,6 +135,30 @@ namespace papya_api
                 // caso haja problemas de sincronismo de horário entre diferentes
                 // computadores envolvidos no processo de comunicação)
                 paramsValidation.ClockSkew = TimeSpan.Zero;
+
+                ////TESTANDO AUTENTICAÇÃO PRO SIGNALR
+                //// Configure the Authority to the expected value for
+                //// the authentication provider. This ensures the token
+                //// is appropriately validated.
+                //bearerOptions.Authority = "https://localhost:5002/"; // TODO: Update URL
+                //bearerOptions.Events = new JwtBearerEvents
+                //{
+                //    OnMessageReceived = context =>
+                //    {
+                //        var accessToken = context.Request.Query["access_token"];
+
+                //        // If the request is for our hub...
+                //        var path = context.HttpContext.Request.Path;
+                //        if (!string.IsNullOrEmpty(accessToken) &&
+                //            (path.StartsWithSegments("/pushhub")))
+                //        {
+                //            // Read the token out of the query string
+                //            context.Token = accessToken;
+                //        }
+                //        return Task.CompletedTask;
+                //    }
+                //};
+                ////TESTANDO AUTENTICAÇÃO PRO SIGNALR
             });
 
             // Ativa o uso do token como forma de autorizar o acesso
@@ -266,7 +292,8 @@ namespace papya_api
             services.AddScoped<IMeioPagamentoDataProvider, MeioPagamentoDataProvider>();
             services.AddScoped<IMesaDataProvider, MesaDataProvider>();
             services.AddScoped<INotificacaoDataProvider, NotificacaoDataProvider>();
-            
+            services.AddScoped<IChatDataProvider, ChatDataProvider>();
+
         }
 
         private static void ConfigSwaggerDoc(IServiceCollection services, string pSwConfig)

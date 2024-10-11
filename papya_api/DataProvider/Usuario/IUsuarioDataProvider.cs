@@ -9,7 +9,7 @@ namespace papya_api.DataProvider
     {
         Task<IEnumerable<Usuario>> GetUsuarios();
 
-        Task<IEnumerable<UsuarioSocial>> GetUsuariosSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento);
+        Task<IEnumerable<UsuarioSocial>> GetUsuariosSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento, int usuariologado);
 
         Task<Usuario> GetUsuario(int idUsuario);
 
@@ -22,6 +22,8 @@ namespace papya_api.DataProvider
         Task<int?> UpdateUsuario(Usuario usuario);
 
         object UpdateStatusUsuario(Usuario usuario);
+
+        object UpdateChaveNotificacaoUsuario(Usuario usuario);
 
         Task DeleteUsuario(int idUsuario);
 

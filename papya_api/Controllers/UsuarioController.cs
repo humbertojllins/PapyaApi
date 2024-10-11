@@ -28,9 +28,9 @@ namespace papya_api.Controllers
         }
 
         [HttpGet("GetUsuarioSocial")]
-        public async Task<IEnumerable<UsuarioSocial>> GetUsuarioSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento)
+        public async Task<IEnumerable<UsuarioSocial>> GetUsuarioSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento, int usuariologado)
         {
-            return await this.UsuarioDataProvider.GetUsuariosSocial(latitude, longitude,distanciaKm,qtdLista, idEstabelecimento);
+            return await this.UsuarioDataProvider.GetUsuariosSocial(latitude, longitude,distanciaKm,qtdLista, idEstabelecimento, usuariologado);
         }
 
         //teste s
@@ -144,6 +144,22 @@ namespace papya_api.Controllers
             try
             {
                 retorno = this.UsuarioDataProvider.UpdateStatusUsuario(usuario);
+            }
+            catch (System.Exception ex)
+            {
+                retorno = ex;
+            }
+
+            return retorno;
+        }
+
+        [HttpPost("UpdateChaveNotificacaoUsuario")]
+        public object UpdateChaveNotificacaoUsuario([FromBody] Usuario usuario)
+        {
+            object retorno = "";
+            try
+            {
+                retorno = this.UsuarioDataProvider.UpdateChaveNotificacaoUsuario(usuario);
             }
             catch (System.Exception ex)
             {

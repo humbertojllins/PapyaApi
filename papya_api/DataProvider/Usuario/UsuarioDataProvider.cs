@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using papya_api.ExtensionMethods;
 using papya_api.Models;
 using papya_api.Services;
+using Newtonsoft.Json;
 
 namespace papya_api.DataProvider
 {
@@ -23,7 +24,7 @@ namespace papya_api.DataProvider
 
         public UsuarioDataProvider()
         {
-            
+
         }
 
         public UsuarioDataProvider(IConfiguration configuration, IEmailSender emailSender, IHostingEnvironment env)
@@ -95,7 +96,7 @@ namespace papya_api.DataProvider
             }
         }
 
-        
+
 
 
 
@@ -187,7 +188,7 @@ namespace papya_api.DataProvider
         //    }
         //}
 
-        public async Task<IEnumerable<UsuarioSocial>> GetUsuariosSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento)
+        public async Task<IEnumerable<UsuarioSocial>> GetUsuariosSocial(float latitude, float longitude, float distanciaKm, int? qtdLista, int? idEstabelecimento, int usuariologado)
         {
             using (var conexao = new MySqlConnection(_configuration.GetConnectionString("tingledb")))
             //using (var conexao = new MySqlConnection(strConexao))
@@ -215,15 +216,18 @@ namespace papya_api.DataProvider
                         "* cos(radians(" + latitude + "))" +
                         "* cos(radians(longitude) " +
                         "- radians(" + longitude + " ))) * 6378 " +
-                        ") distanciakm ";
+                        ") distanciakm, ";
+                //sql += " ifnull(cfrom.dataleiturafrom, cto.dataleiturato) dataleitura, 0 as qtdmensagem ";
+                sql += "null dataleitura, 0 as qtdmensagem ";
 
                 sql += "from tingledb.usuario u ";
                 sql += "inner join tingledb.usuario_conta uc on u.id = uc.id_usuario and uc.publico = 1 ";
                 sql += "inner join tingledb.conta c on c.id = uc.id_conta and c.id_status = 1 ";
                 sql += "inner join tingledb.mesa m on m.id = c.id_mesa ";
                 sql += "inner join tingledb.estabelecimento e on m.fk_id_estabelecimento = e.id_estabelecimento ";
-
-                sql += "where (" +
+                //sql += "left join tingledb.chat cfrom on u.id = cfrom.usuariofrom ";
+                //sql += "left join tingledb.chat cto on u.id = cto.usuarioto ";
+                sql += " where (" +
                         "acos(sin(radians(latitude))" +
                         "* sin(radians(" + latitude + "))" +
                         "+ cos(radians(latitude))" +
@@ -237,10 +241,43 @@ namespace papya_api.DataProvider
                 try
                 {
                     conexao.Open();
-                    return await conexao.QueryAsync<UsuarioSocial>(
+                    IEnumerable<UsuarioSocial> lista = await conexao.QueryAsync<UsuarioSocial>(
                     sql,
                     null,
                     commandType: System.Data.CommandType.Text);
+                    ChatDataProvider cdp = new ChatDataProvider(_configuration);
+                    if (lista != null)
+                    {
+                        DateTime? dtAtualizacao;
+                        //DateTime? dtAtualizacao = lista.Where(c => c.Id == usuariologado).FirstOrDefault().DataLeitura;
+                        //dtAtualizacao = dtAtualizacao == null ? Convert.ToDateTime(DateTimeOffset.Now):dtAtualizacao;
+                        DateTime dtOrdem = new DateTime(1999, 1, 1);
+                        foreach (var item in lista)
+                        {
+                            Chat c = cdp.GetChatInternal(usuariologado, item.Id).Result;
+
+                            if (c != null)
+                            {
+                                //Verifica se o usuario que esta logado é o usuario from e retorna a dataatualizacaofrom
+                                if (c.usuariofrom == usuariologado)
+                                {
+                                    dtAtualizacao = c.dataleiturafrom!=null? c.dataleiturafrom: DateTimeOffset.Now.DateTime;
+                                }
+                                else
+                                {
+                                    dtAtualizacao = c.dataleiturato != null ? c.dataleiturato : DateTimeOffset.Now.DateTime;
+                                }
+                                //Recupera a lista de mensagens para remover as mensagens deletadas
+                                int qtdMsgFrom = c.listamensagens.Count(m => m.from == usuariologado && m.to   == item.Id && m.data > dtAtualizacao);
+                                int qtdMsgTo = c.listamensagens.Count(m =>   m.to   == usuariologado && m.from == item.Id && m.data > dtAtualizacao);
+
+                                item.qtdmensagem = qtdMsgFrom + qtdMsgTo;
+                                dtOrdem = c.datahora;
+                            }
+                            item.DataLeitura = dtOrdem;
+                        }
+                    }
+                    return lista.Where(r=> r.Id != usuariologado).OrderByDescending(o=>o.DataLeitura);
                 }
                 catch (Exception ex)
                 {
@@ -258,14 +295,14 @@ namespace papya_api.DataProvider
                 conexao.Open();
                 var sql = "update usuario set " +
                     (usuario.Id_Tipo_Usuario == null ? "" : "id_tipo_usuario ='" + usuario.Id_Tipo_Usuario + "',") +
-                    (usuario.Nome==null ? "" : "nome ='" + usuario.Nome + "',") +
+                    (usuario.Nome == null ? "" : "nome ='" + usuario.Nome + "',") +
                     (usuario.Cpf == null ? "" : "cpf ='" + usuario.Cpf + "',") +
                     (usuario.Nascimento == null ? "" : "nascimento ='" + usuario.Nascimento + "',") +
                     (usuario.Senha == null ? "" : "senha ='" + senhaCript + "',") +
                     (usuario.Email == null ? "" : "email ='" + usuario.Email + "',") +
                     (usuario.Telefone == null ? "" : "telefone ='" + usuario.Telefone + "',") +
                     (usuario.Imagem == null ? "" : "imagem ='" + usuario.Imagem + "', ") +
-                    "resetar_Senha =0 " + 
+                    "resetar_Senha =0 " +
                     " where id=" + usuario.Id;
                 int x = await conexao.ExecuteAsync(sql
                     , commandType: System.Data.CommandType.Text);
@@ -283,7 +320,22 @@ namespace papya_api.DataProvider
                     (usuario.StatusSocial == null ? "" : "statusSocial ='" + usuario.StatusSocial + "'") +
                     " where id=" + usuario.Id;
                 return conexao.ExecuteAsync(sql, commandType: System.Data.CommandType.Text).Result;
-                
+
+
+                //UPDATE `usuario` SET `nome` = 'Gerente 1', `senha` = '1234' WHERE `usuario`.`id` = 1
+            }
+        }
+
+        public object UpdateChaveNotificacaoUsuario(Usuario usuario)
+        {
+            using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
+            {
+                conexao.Open();
+                var sql = "update usuario set " +
+                    (usuario.chaveNotificacao == null ? "" : "chaveNotificacao ='" + usuario.chaveNotificacao + "'") +
+                    " where id=" + usuario.Id;
+                return conexao.ExecuteAsync(sql, commandType: System.Data.CommandType.Text).Result;
+
 
                 //UPDATE `usuario` SET `nome` = 'Gerente 1', `senha` = '1234' WHERE `usuario`.`id` = 1
             }
@@ -325,8 +377,8 @@ namespace papya_api.DataProvider
                         , commandType: System.Data.CommandType.Text));
 
                     if (a != 0)
-                    {   
-                        await _emailSender.SendEmailAsync(email, "Papya - Troca de senha",htmlBody,textBody);
+                    {
+                        await _emailSender.SendEmailAsync(email, "Papya - Troca de senha", htmlBody, textBody);
                     }
                     return a;
                     //return Task.FromResult<object>(null);

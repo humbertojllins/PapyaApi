@@ -280,14 +280,14 @@ namespace papya_api.DataProvider
                             js += ",";
 
                         js += "{";
-
+                        string usuarioPrincipal = (conta.FirstOrDefault(cli => cli.USUARIO_ABRIU_CONTA == 1) == null ? conta.First().NOME_USUARIO : conta.First(cli => cli.USUARIO_ABRIU_CONTA == 1).NOME_USUARIO);
 
                         js += "\"num_conta\":" + conta.First().NUM_CONTA + ",";
                         js += "\"valor_total_conta\":" + conta.First().VALOR_TOTAL_CONTA + ",";
                         js += "\"status_conta\":" + "\"" + conta.First().STATUS_CONTA + "\",";
                         js += "\"desc_mesa\":" + "\"" + conta.First().DESC_MESA + "\",";
                         js += "\"garcom\":" + "\"" + conta.First().NOME_FUNCIONARIO + "\",";
-                        js += "\"usuario_principal\":" + "\"" + conta.First(cli=>cli.USUARIO_ABRIU_CONTA==1).NOME_USUARIO + "\",";
+                        js += "\"usuario_principal\":" + "\"" + usuarioPrincipal + "\",";
 
                         var listaUsuarios = from a in conta
                                             group a by a.USUARIO_ID into newGroup

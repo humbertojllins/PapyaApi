@@ -1,10 +1,16 @@
 ﻿using System;
 using System.IO;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
-using Amazon.SimpleEmail.Model;
+//using Amazon.SimpleEmail.Model;
+using Google.Apis.Auth.OAuth2;
 using ImageMagick;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using papya_api.Models;
 using static papya_api.Controllers.ImageController;
 
 namespace papya_api.Services
@@ -154,6 +160,68 @@ namespace papya_api.Services
             //Reduzir o tamanho da imagem
             CompressImage(tmpFileName, finalFileName, true);
             return pentidade + idUsuario.ToString() + files.FileName;
+        }
+
+        public void EnviarNotificacaoFirebase(string pathProjeto, string chaveUsuario, string titulo, string body,string image, string key1, string key2)
+        {
+            //----------Generating Bearer token for FCM---------------
+            string contentRootPath = pathProjeto;
+            string fileName = contentRootPath + "/papyanotificacao-718bfc509b1e.json";
+            string scopes = "https://www.googleapis.com/auth/firebase.messaging";
+            var bearertoken = ""; // Bearer Token in this variable
+
+            using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            {
+                bearertoken = GoogleCredential
+                  .FromStream(stream) // Loads key file
+                  .CreateScoped(scopes) // Gathers scopes requested
+                  .UnderlyingCredential // Gets the credentials
+                  .GetAccessTokenForRequestAsync().Result; // Gets the Access Token
+            }
+
+            ///--------Calling FCM-----------------------------
+
+            var clientHandler = new HttpClientHandler();
+            var client = new HttpClient(clientHandler);
+
+            client.BaseAddress = new Uri("https://fcm.googleapis.com/v1/projects/papyanotificacao/messages:send"); // FCM HttpV1 API
+
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearertoken); // Authorization Token in this variable
+
+            //---------------Assigning Of data To Model --------------
+
+            Root rootObj = new Root();
+            rootObj.message = new Message();
+            rootObj.message.token = chaveUsuario; //FCM Token id
+
+            rootObj.message.data = new Data();
+            rootObj.message.data.title = titulo;
+            rootObj.message.data.body = body;
+            rootObj.message.data.image = image;
+
+            rootObj.message.data.key_1 = key1;
+            rootObj.message.data.key_2 = key2;
+            rootObj.message.notification = new Notification();
+            rootObj.message.notification.title = titulo;
+            rootObj.message.notification.body = body;
+            rootObj.message.notification.image = image;
+
+            //-------------Convert Model To JSON ----------------------
+            var jsonObj = JsonConvert.SerializeObject(rootObj);
+
+            //------------------------Calling Of FCM Notify API-------------------
+
+            var data = new StringContent(jsonObj.ToString(), Encoding.UTF8, "application/json");
+            data.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            //var response = client.PostAsync("https://fcm.googleapis.com/v1/projects/haggnotificacao/messages:send", data).Result; // Calling The FCM httpv1 API
+            var response = client.PostAsync("https://fcm.googleapis.com/v1/projects/papyanotificacao/messages:send", data).Result; // Calling The FCM httpv1 API
+            //---------- Deserialize Json Response from API ----------------------------------
+
+            var jsonResponse = response.Content.ReadAsStringAsync().Result;
+            var responseObj = JsonConvert.DeserializeObject(jsonResponse);
         }
 
     }

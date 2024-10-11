@@ -19,6 +19,8 @@ namespace papya_api.Models
         public int? Resetar_Senha { get; set; }
         public string Telefone { get; set; }
         public string StatusSocial { get; set; }
+        public string chaveNotificacao { get; set; }
+        
 
         public static explicit operator Usuario(Task<Usuario> v)
         {

@@ -26,7 +26,7 @@ namespace papya_api.Controllers
             this.EstabelecimentoDataProvider = EstabelecimentoDataProvider;
         }
 
-        //[Authorize("Bearer")]
+        [Authorize("Bearer")]
         //[HttpGet("{id}")]
         [HttpGet]
         public object Get(float latitude, float longitude, int? qtdLista, int? idEstabelecimento)
