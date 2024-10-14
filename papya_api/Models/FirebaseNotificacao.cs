@@ -57,6 +57,16 @@
             get;
             set;
         }
+        public Android android
+        {
+            get;
+            set;
+        }
+        public Apns apns
+        {
+            get;
+            set;
+        }
 
     }
 
@@ -74,12 +84,6 @@
             get;
             set;
         }
-        public string image
-        {
-            get;
-            set;
-        }
-
     }
     public class Root
     {
@@ -91,4 +95,83 @@
         }
 
     }
+    public class Android
+    {
+        public NotificacaoAndroid notification
+        {
+            get;
+            set;
+        }
+    }
+    public class Apns
+    {
+        public Payload payload
+        {
+            get;
+            set;
+        }
+        public Fcm_options fcm_options
+        {
+            get;
+            set;
+        }
+        
+    }
+
+    public class NotificacaoAndroid
+    {
+        public string sound
+        {
+            get;
+            set;
+        }
+        public string image
+        {
+            get;
+            set;
+        }
+    }
+    public class Payload
+    {
+        public Aps aps
+        {
+            get;
+            set;
+        }
+    }
+    public class Fcm_options
+    {
+        public string image
+        {
+            get;
+            set;
+        }
+    }
+    public class Aps
+    {
+        public string sound
+        {
+            get;
+            set;
+        }
+        public int mutablecontent
+        {
+            get;
+            set;
+        }
+
+        public bool default_vibrate_timings
+        {
+            get;
+            set;
+        }
+        public string[] vibrate_timings
+        {
+            get;
+            set;
+        }
+
+    }
+
+
 }

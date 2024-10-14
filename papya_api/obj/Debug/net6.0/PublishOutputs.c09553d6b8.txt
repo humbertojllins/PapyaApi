@@ -57,6 +57,7 @@ C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\K4os.Compression.LZ4.
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\K4os.Hash.xxHash.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Magick.NET-Q8-AnyCPU.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Magick.NET.Core.dll
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\MailKit.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Web.Cors.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Net.Http.Formatting.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Web.Http.dll
@@ -74,6 +75,7 @@ C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Microsoft.Owin.Cors.d
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Microsoft.Owin.Host.SystemWeb.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Microsoft.Owin.Security.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Microsoft.Owin.Security.OAuth.dll
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\MimeKit.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\MySql.Data.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
@@ -86,9 +88,11 @@ C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.CodeDom.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Data.SqlClient.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Formats.Asn1.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.IO.Pipelines.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Management.dll
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Security.Cryptography.Pkcs.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Security.Permissions.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\System.Text.Encoding.CodePages.dll
@@ -116,6 +120,7 @@ C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win-x86\nati
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Management.dll
+C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Projetos\PapyaApi\papya_api\obj\Debug\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

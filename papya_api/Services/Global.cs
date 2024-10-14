@@ -206,10 +206,27 @@ namespace papya_api.Services
             rootObj.message.notification = new Notification();
             rootObj.message.notification.title = titulo;
             rootObj.message.notification.body = body;
-            rootObj.message.notification.image = image;
+            rootObj.message.android = new Android();
+            rootObj.message.android.notification = new NotificacaoAndroid();
+            rootObj.message.android.notification.sound = "default";
+            rootObj.message.android.notification.image = image;
+            rootObj.message.apns = new Apns();
+            rootObj.message.apns.payload = new Payload();
+            rootObj.message.apns.payload.aps = new Aps();
+            rootObj.message.apns.payload.aps.sound = "default";
+            //rootObj.message.apns.payload.aps.mutablecontent = 1;
+            //rootObj.message.apns.payload.aps.default_vibrate_timings = false;
+            //string[] vibrate_timings = { "0.0s", "0.2s", "0.1s", "0.2s" };
+            //rootObj.message.apns.payload.aps.vibrate_timings = vibrate_timings;
+            rootObj.message.apns.fcm_options = new Fcm_options();
+            rootObj.message.apns.fcm_options.image = image;
 
+            //rootObj.message.notification.vibrate = true;
+
+            
             //-------------Convert Model To JSON ----------------------
             var jsonObj = JsonConvert.SerializeObject(rootObj);
+            //jsonObj = jsonObj.Replace("mutablecontent", "mutable-content");
 
             //------------------------Calling Of FCM Notify API-------------------
 

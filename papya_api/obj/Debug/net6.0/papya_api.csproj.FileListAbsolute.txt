@@ -184,3 +184,8 @@ C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\Google.Apis.Core.dll
 C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\System.CodeDom.dll
 C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\System.Management.dll
 C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
+C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\MailKit.dll
+C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\MimeKit.dll
+C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Projetos\PapyaApi\papya_api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

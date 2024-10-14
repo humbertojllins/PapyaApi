@@ -29,6 +29,8 @@ namespace papya_api.DataProvider
 
         Task<int?> EsqueceuSenha(string email);
 
+        Task<string> ValidaEmailUsuario(string chaveDinamica);
+
 
     }
 }

@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'papya_api.' " />
+
+  <ItemGroup>
+    <Compile Remove="Services\EmailService.cs" />
+  </ItemGroup>
   <ItemGroup>
     <Folder Include="DataProvider\TipoUsuarioPasta\" />
     <Folder Include="DataProvider\Usuario\" />
@@ -13,7 +17,6 @@
     <Folder Include="DataProvider\Cardapio\" />
     <Folder Include="ExtensionMethods\" />
     <Folder Include="DataProvider\Pedido\" />
-    <Folder Include="Services\" />
     <Folder Include="DataProvider\Promocoes\" />
     <Folder Include="DataProvider\Categoria\" />
     <Folder Include="DataProvider\Estabelecimento\" />
@@ -30,6 +33,7 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+    <PackageReference Include="MailKit" Version="4.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="MySql.Data" Version="9.0.0" />
     <PackageReference Include="Dapper" Version="1.60.6" />

@@ -176,5 +176,24 @@ namespace papya_api.Controllers
         {
             await this.UsuarioDataProvider.DeleteUsuario(id);
         }
+
+        // PUT api/values/5
+        //[Authorize("Bearer")]
+        //[HttpPut("{id}")]
+        [HttpGet("ValidaEmailUsuario")]
+        //public object ValidaEmailUsuario(string chaveDinamica)
+        public async Task<string> ValidaEmailUsuario(string chaveDinamica)
+        {
+            object retorno = "";
+            try
+            {
+                return await this.UsuarioDataProvider.ValidaEmailUsuario(chaveDinamica);
+            }
+            catch (System.Exception ex)
+            {
+                retorno = ex;
+            }
+            return null;
+        }
     }
 }
