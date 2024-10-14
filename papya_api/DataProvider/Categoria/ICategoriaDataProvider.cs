@@ -10,13 +10,11 @@ namespace papya_api.DataProvider
     {
         Task<IEnumerable<Categoria>> GetCategorias(int idEstabelecimento, int? qtdLista);
 
-        Task<Categoria> GetCategoria();
+        Task<Categoria> GetCategoria(int idCategoria);
 
-        Task AddCategoria(Categoria categoria);
+        object AddCategoria(Categoria categoria);
 
-        Task UpdateCategoria(Categoria categoria);
-
-        Task DeleteCategoria(int CodCategoria);
+        object UpdateCategoria(Categoria categoria);
 
     }
 }

@@ -24,53 +24,33 @@ namespace papya_api.DataProvider
             _configuration = configuration;
         }
 
-        public Task AddCategoria(Categoria categoria)
+        public object AddCategoria(Categoria categoria)
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
                 conexao.Open();
-                var sql = "insert into categoria (descricao, fk_id_estabelecimento, imagem)" +
+                var sql = "insert into categoria (descricao, fk_id_estabelecimento)" +
                     " values(" +
-                    "'" + categoria.Descricao + "'," +
-                    "" + categoria.Fk_Id_estabelecimento + "," +
-                    "'" + categoria.Imagem + "')";
-                return conexao.ExecuteAsync(sql
+                    "'" + categoria.descricao + "'," +
+                    "" + categoria.fk_id_estabelecimento + ");";
+                sql += " select last_insert_id();";
+                return conexao.ExecuteScalar(sql
                     , commandType: System.Data.CommandType.Text);
             }
         }
-
-        public Task DeleteCategoria(int CodCategoria)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Categoria> GetCategoria()
+        public async Task<Categoria> GetCategoria(int idCategoria)
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
+                string sql = "select * from categoria";
+                sql += " where id=" + idCategoria + ";";
                 conexao.Open();
                 return await conexao.QuerySingleOrDefaultAsync<Categoria>(
-                    "select * from categoria",
+                    sql,
                     null,
                     commandType: System.Data.CommandType.Text);
             }
         }
-
-        //public async Task<IEnumerable<Categoria>> GetCategorias(int idEstabelecimento, int? qtdLista)
-        //{
-        //    using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
-        //    {
-        //        string sql = "select ";
-        //        sql += qtdLista == null ? " " : " top " + qtdLista + " ";
-        //        sql += " * from CATEGORIA where fk_id_estabelecimento=" + idEstabelecimento.ToString();
-        //        sql += qtdLista == null ? ";" : " limit " + qtdLista + ";";
-        //        conexao.Open();
-        //        return await conexao.QueryAsync<Categoria>(
-        //        sql,
-        //        null,
-        //        commandType: System.Data.CommandType.Text);
-        //    }
-        //}
 
         public async Task<IEnumerable<Categoria>> GetCategorias(int idEstabelecimento, int? qtdLista)
         {
@@ -87,16 +67,15 @@ namespace papya_api.DataProvider
             }
         }
 
-        public async Task UpdateCategoria(Categoria categoria)
+        public object UpdateCategoria(Categoria categoria)
         {
             using (var conexao = new MySqlConnection(ConnectionHelper.GetConnectionString(_configuration)))
             {
                 conexao.Open();
 
-                string sql = "update categoria set descricao='" + categoria.Descricao + "'," +
-                    "imagem='" + categoria.Imagem + "'" +
-                   " where id=" + categoria.Id;
-                await conexao.ExecuteAsync(sql
+                string sql = "update categoria set descricao='" + categoria.descricao + "'" +
+                   " where id=" + categoria.id;
+                return conexao.Execute(sql
                     ,
                     null,
                     commandType: System.Data.CommandType.Text);

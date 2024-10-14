@@ -30,32 +30,32 @@ namespace papya_api.Controllers
         [HttpGet("{id}")]
         public async Task<Categoria> Get(int id)
         {
-            return await this.categoriaDataProvider.GetCategoria();
+            return await this.categoriaDataProvider.GetCategoria(id);
         }
 
         // POST api/values
         [Authorize("Bearer")]
         [HttpPost]
-        public async Task Post([FromBody] Categoria categoria)
+        public object Post([FromBody] Categoria categoria)
         {
-            await this.categoriaDataProvider.AddCategoria(categoria);
+            return this.categoriaDataProvider.AddCategoria(categoria);
         }
 
         // PUT api/values/5
         [Authorize("Bearer")]
         [HttpPut]
-        public async Task Put(int id, [FromBody] Categoria categoria)
+        public object Put(int id, [FromBody] Categoria categoria)
         {
-            await this.categoriaDataProvider.UpdateCategoria(categoria);
+            return this.categoriaDataProvider.UpdateCategoria(categoria);
         }
 
-        // DELETE api/values/5
-        [Authorize("Bearer")]
-        [HttpDelete("{id}")]
-        public async Task Delete(int id)
-        {
-            await this.categoriaDataProvider.DeleteCategoria(id);
-        }
+        //// DELETE api/values/5
+        //[Authorize("Bearer")]
+        //[HttpDelete("{id}")]
+        //public async Task Delete(int id)
+        //{
+        //    await this.categoriaDataProvider.DeleteCategoria(id);
+        //}
 
     }
 }
